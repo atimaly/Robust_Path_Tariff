@@ -1,2 +1,2 @@
 # Robust_Path_Tariff
-Robust Bilevel Solution for determining highway's tariff
+Robust Bilevel Solution for determining highway's tariff for profit maxmization.
