@@ -1,12 +1,12 @@
 [
 {
   "directory": "/home/anarchturandot/Documents/Lemon/lemon-main/contrib/Robust_Path_Tariff/build",
-  "command": "/usr/bin/c++  -DHAVE_CPLEX -DIL_STD -I/home/anarchturandot/Documents/Lemon/lemon-main/contrib/Robust_Path_Tariff/includes -isystem /opt/ibm/ILOG/CPLEX_Studio201/concert/include -isystem /opt/ibm/ILOG/CPLEX_Studio201/cplex/include  -fdiagnostics-color=always -W -Wshadow -Wall -Wno-unused-result -lemon -D_DEBUG   -Wno-deprecated-declarations -std=gnu++17 -o CMakeFiles/robust_path_tariff.dir/src/main_cplex.cpp.o -c /home/anarchturandot/Documents/Lemon/lemon-main/contrib/Robust_Path_Tariff/src/main_cplex.cpp",
+  "command": "/usr/bin/clang++  -DHAVE_CPLEX -DIL_STD -I/home/anarchturandot/Documents/Lemon/lemon-main/contrib/Robust_Path_Tariff/includes -isystem /opt/ibm/ILOG/CPLEX_Studio201/concert/include -isystem /opt/ibm/ILOG/CPLEX_Studio201/cplex/include  -fdiagnostics-color=always -W -Wshadow -Wall -Wno-unused-result -lemon -D_DEBUG   -std=gnu++17 -o CMakeFiles/robust_path_tariff.dir/src/main_cplex.cpp.o -c /home/anarchturandot/Documents/Lemon/lemon-main/contrib/Robust_Path_Tariff/src/main_cplex.cpp",
   "file": "/home/anarchturandot/Documents/Lemon/lemon-main/contrib/Robust_Path_Tariff/src/main_cplex.cpp"
 },
 {
   "directory": "/home/anarchturandot/Documents/Lemon/lemon-main/contrib/Robust_Path_Tariff/build",
-  "command": "/usr/bin/c++  -DHAVE_CPLEX -DIL_STD -I/home/anarchturandot/Documents/Lemon/lemon-main/contrib/Robust_Path_Tariff/includes -isystem /opt/ibm/ILOG/CPLEX_Studio201/concert/include -isystem /opt/ibm/ILOG/CPLEX_Studio201/cplex/include  -fdiagnostics-color=always -W -Wshadow -Wall -Wno-unused-result -lemon -D_DEBUG   -Wno-deprecated-declarations -std=gnu++17 -o CMakeFiles/robust_path_tariff.dir/src/robust_energy_cplex.cpp.o -c /home/anarchturandot/Documents/Lemon/lemon-main/contrib/Robust_Path_Tariff/src/robust_energy_cplex.cpp",
+  "command": "/usr/bin/clang++  -DHAVE_CPLEX -DIL_STD -I/home/anarchturandot/Documents/Lemon/lemon-main/contrib/Robust_Path_Tariff/includes -isystem /opt/ibm/ILOG/CPLEX_Studio201/concert/include -isystem /opt/ibm/ILOG/CPLEX_Studio201/cplex/include  -fdiagnostics-color=always -W -Wshadow -Wall -Wno-unused-result -lemon -D_DEBUG   -std=gnu++17 -o CMakeFiles/robust_path_tariff.dir/src/robust_energy_cplex.cpp.o -c /home/anarchturandot/Documents/Lemon/lemon-main/contrib/Robust_Path_Tariff/src/robust_energy_cplex.cpp",
   "file": "/home/anarchturandot/Documents/Lemon/lemon-main/contrib/Robust_Path_Tariff/src/robust_energy_cplex.cpp"
 }
 ]

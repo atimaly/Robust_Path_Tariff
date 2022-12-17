@@ -2,6 +2,7 @@
 #include <cstdio>
 #include <ilconcert/iloenv.h>
 #include <ilconcert/iloexpression.h>
+#include <limits>
 #include <random>
 #include <lemon/list_graph.h>
 #include <lemon/time_measure.h>
@@ -59,7 +60,7 @@ Graph::Graph(std::istream &is) : edge_number_{0} {
 	}
 }
 
-Paths::Paths(std::istream &is) : Graph(is), leader_max_earn_{-1} {
+Paths::Paths(std::istream &is) : Graph(is), leader_max_earn_{std::numeric_limits<double>::max()} {
 	//The first input is the arc_buy_p_
 	// then peoples destination with first how many people are there
 	// The polyhedra of Q and U
@@ -863,6 +864,29 @@ double Paths::FindingTariffWithFiniteUtilities(vector<double> &q_tariff, const i
 	return obj_value;
 }
 
+
+
+void Paths::MoveInUtilitySpace(const vector<vector<double>> &x_flow, int index_of_utility, const vector<vector<double>> &utility) {
+	//Moving in the utility space while keeping the x_flow the optimal answer
+	IloArray<IloNumArray> new_utility(env, people_n_); //vector<double>(edge_number_, 0)
+		
+
+	set_of_utilities_.push_back(new_utility);
+}
+
+bool Paths::SubstantiallyDifferentyUtility(double delta , int index_of_utility, const vector<vector<double>> &utility) {
+	//Check wether the utility at the of index_of_utility in set_of_utilities_ is substantially different than utility
+	FOR(i,people_n_) {
+		FOR(e,edge_number_) {
+			if(edge_number_*delta <= std::abs(utility[i][e] - set_of_utilities_[index_of_utility][i][e])) {
+				return true;
+			}
+		}
+	}	
+	
+	return false;
+}
+
 void Paths::FindingOptimalCost(std::ostream &os) {
 	//Getting an initial q value saving it in arc_cost_q_
 		vector<double> q_tariff;
@@ -881,7 +905,7 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 		*/
 	
 	//double leader_max_earn_{-1};
-	int iteration{3};
+	int iteration{4};
 	FOR(i,iteration) {
 		#if _DEBUG
 		os << "---------------------ITERATION: " << i << " ----------------------------\n";
@@ -896,7 +920,7 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 		//Section 3.5.
 			try{
 				double leader_earn = FindingTariffWithFiniteUtilities(q_tariff, big_M);
-				leader_max_earn_ = std::max(leader_earn, leader_max_earn_);
+				leader_max_earn_ = std::min(leader_earn, leader_max_earn_);
 			}
 			catch(INFEASIBLE) {
 				os << "The program has become Infeasible ending it here.\n"; 

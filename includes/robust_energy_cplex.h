@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #include <ilconcert/iloenv.h>
+#include <limits>
 #include <random>
 #include <lemon/list_graph.h>
 #include <lemon/time_measure.h>
@@ -9,6 +10,7 @@
 #include <lemon/concepts/graph.h>
 
 #include <ilcplex/ilocplex.h>
+#include <vector>
 
 using namespace lemon;
 using namespace std;
@@ -51,7 +53,7 @@ class Paths : public Graph {
 
 		//vector<vector<int>> defining_polyhedra_q_;
 		//vector<vector<int>> defining_polyhedra_u_;
-		double leader_max_earn_;
+		double leader_max_earn_; 
 		
 		pair<int,int> RandomPath();
 		
@@ -64,6 +66,10 @@ class Paths : public Graph {
 		double MinimizeLeadersEarning(const vector<double> &q_tariff, const int big_M, std::ostream &os = std::cerr);
 
 		double FindingTariffWithFiniteUtilities(vector<double> &q_tariff, const int big_M, std::ostream &os = std::cerr);
+
+		bool SubstantiallyDifferentyUtility(double delta, int index_of_utility, const vector<vector<double>> &utility);
+
+		void MoveInUtilitySpace(const vector<vector<double>> &x_flow, int index_of_utility, const vector<vector<double>> &utility);
 
 	public:
 

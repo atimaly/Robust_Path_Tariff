@@ -11,6 +11,18 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D_DEBUG")
 set(CMAKE_CXX_CLANG_TIDY clang-tidy -checks=cppcoreguidelines-*,readability-*, -header-filter=.*)
 #set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
+
+if ("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang")
+  MESSAGE("Clang")
+elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
+  MESSAGE("GNU")
+elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Intel")
+  MESSAGE("Intel")
+elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
+  MESSAGE("MSVC")
+endif()
+
+
 if(MSVC)
 	#----------- Since we are using CPLEX >=12.8, only 64 bit is allowed -------------------
 	if(NOT "${CMAKE_SIZEOF_VOID_P}" STREQUAL "8" )
