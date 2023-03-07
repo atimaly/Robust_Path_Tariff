@@ -10,6 +10,7 @@
 #include <lemon/adaptors.h>
 #include <lemon/concepts/path.h>
 #include <lemon/concepts/graph.h>
+ //#include <lemon/johnson.h>
 
 #include <ilcplex/ilocplex.h>
 
@@ -27,8 +28,6 @@ Graph::Graph(int n, double erdos_p) : n_{n},  edge_number_{0}, erdos_edge_possib
 	}
 	
 	//Erdős-Renyi Graph Model
-	std::random_device rd;  //Will be used to obtain a seed for the random number engine
-	std::mt19937 gen(rd()); //Standard mersenne_twister_engine seeded with rd()
 	std::discrete_distribution<> distrib({1-erdos_p, erdos_p});
 	FOR(i,n_) {
 		FOR(j,n_) {
@@ -58,6 +57,148 @@ Graph::Graph(std::istream &is) : edge_number_{0} {
 			g.addArc(nodes[i], nodes[out]);
 		}
 	}
+}
+
+Paths::Paths(const int people, const int n, double erdos_p, PolyCreator prices_metad, PolyCreator utility_metad) : Graph(n,erdos_p), people_n_{people}, leader_max_earn_{std::numeric_limits<double>::max()} {
+	
+	vector<vector<bool>> DP(n_, vector<bool>(n,false));
+	ListDigraph::ArcMap<int> uni_one(g);
+	for (ListDigraph::ArcIt e(g); e != INVALID; ++e) {
+		#if _DEBUG
+		cerr << "The id of the current vector: " << g.id(e) << "\n";
+		#endif
+		uni_one[e] = 1;
+		DP[g.id(g.source(e))][g.id(g.target(e))] = true;
+	}
+
+	FOR(k,n_)
+		FOR(i,n_)
+			FOR(j,n_) {
+				if(DP[i][k] && DP[k][j]) {
+					DP[i][j] = true;
+				}
+			}
+
+	#if _DEBUG
+	cerr << "Floyd Warshall: \n";
+	for(auto &v: DP) {
+		for(auto u : v) {
+			if(u) cerr << '1' << ' ';
+			else cerr << '0' << ' ';
+		}
+		cerr << endl;
+	}
+	
+	#endif
+
+	std::uniform_int_distribution<> distrib(0,n_-1);
+
+	FOR(p,people) {
+		while(true) {
+			int u = distrib(gen); int v = distrib(gen);
+			if(DP[u][v]) {
+				paths_.push_back(make_pair(u,v));
+				break;
+			}
+		}
+
+	}
+
+	#if _DEBUG
+	cerr << "People's paths:\n";
+	Print_vector_pairs(paths_);
+	#endif
+	
+	std::uniform_int_distribution<>uni_d(1,3);
+	FOR(i,edge_number_) {
+		arc_buy_p_[g.arcFromId(i)] = uni_d(gen);
+	}
+	#if _DEBUG
+	cerr << "CREATED ARC COSTS FOR THE FIRST AGENT TO PAY:\n";
+	#endif
+	
+	//CreatePolyhedraQ (The prices polyhedron for the first agent);
+	prices_metad.col_numb_ = edge_number_;
+	PolyhedronPrices(prices_metad);
+
+	#if _DEBUG
+	cerr << "CREATED POLYHEDRA Q(PRICES)\n";
+	cerr << polyhedra_q_ << endl;
+	#endif
+
+	//CreatePolyhedraU (The utility of the second agents)
+	utility_metad.col_numb_ = people_n_;
+	PolyhedronUtility(utility_metad);
+	#if _DEBUG
+	cerr << "CREATED POLYHEDRA U(Utility)\n";
+	cerr << polyhedra_u_ << endl;
+	#endif
+
+}             	
+              	
+              	
+void Paths::PolyhedronPrices(PolyCreator metad) {
+	//Fill the polyhedra_q_ and q_ variables
+	      	
+	char varname[20]; 
+	//Variables and their upper bound
+	std::uniform_int_distribution<> distrib(0,metad.max_upper_bound_var_);
+	FOR(_i,metad.col_numb_) {sprintf(varname, "q_%d", _i); q_.add(IloNumVar(env, 0, distrib(gen), ILOFLOAT, varname));}
+	//Constraints
+	std::normal_distribution<> norm_d{metad.max_upper_bound_subset_, 1};
+	std::discrete_distribution<> bool_d({1-metad.prob_in_subset_, metad.prob_in_subset_});
+	FOR(i,metad.row_numb_) {
+		//bool someting_added = false;
+		int how_many_added = 0;
+		while(how_many_added < 2) {
+			IloExpr expr(env);
+			FOR(j,metad.col_numb_) {
+				if(bool_d(gen)) {
+					expr += q_[j];
+					++how_many_added;
+				}
+			}
+			if(how_many_added >= 2) polyhedra_q_.add(expr <= norm_d(gen));
+			else how_many_added = 0;
+		}
+	}
+
+}
+
+void Paths::PolyhedronUtility(PolyCreator metad) {
+	//Fill the polyhedra_u_ and u_ variables
+	
+	char varname[20]; 
+	//Variables and their upper bound
+	u_.setSize(people_n_);
+	FOR(i,people_n_) {
+		u_[i] = IloNumVarArray(env, edge_number_);
+		FOR(j,edge_number_) {
+			sprintf(varname, "u_%d%d", i, j);
+			std::uniform_int_distribution<> uni_d(0,metad.max_upper_bound_var_);
+			u_[i][j] = IloNumVar(env, 0., uni_d(gen), ILOFLOAT, varname);
+		}
+	}
+	//Constraints
+	std::normal_distribution<> norm_d{metad.max_upper_bound_subset_, 1};
+	std::discrete_distribution<> bool_d({1-metad.prob_in_subset_, metad.prob_in_subset_});
+	FOR(p,people_n_) {
+		FOR(i,metad.row_numb_) {
+			int how_many_added = 0;
+			while(how_many_added < 2) {
+				IloExpr expr(env);
+				FOR(j,edge_number_) {
+					if(bool_d(gen)) {
+						expr += u_[p][j];
+						++how_many_added;
+					}
+				}
+				if(how_many_added >= 2) polyhedra_u_.add(expr <= norm_d(gen));
+				else how_many_added = 0;
+			}
+		}
+	}
+
 }
 
 Paths::Paths(std::istream &is) : Graph(is), leader_max_earn_{std::numeric_limits<double>::max()} {
@@ -216,7 +357,7 @@ void Paths::PerturbationOfq(vector<double> &q_tariff, const double delta, std::o
 	Print_vector_pairs(q_indexed);
 	#endif
 
-	std::transform(all(q_indexed), q_tariff.begin(), [this](auto &a){return a.first + arc_buy_p_[g.arcFromId(a.second)];});
+	std::transform(all(q_indexed), q_tariff.begin(), [this](auto &a){return a.first;});
 
 	#if _DEBUG
     	os << "\n\n-------PerturbationOfq END-------" << endl;
@@ -266,7 +407,8 @@ void Paths::InitialQValue(vector<double> &q_tariff, std::ostream &os) const{
     #endif
 }
 
-double Paths::MinimizeLeadersEarning(const vector<double> &q_tariff, const int big_M, std::ostream &os) {
+double Paths::MinimizeLeadersEarning(const vector<double> &q_tariff, const int big_M, vector<double> &alpha_pl_return, vector<double> &alpha_neg_return,
+		vector<map<int,double>> &beta_return, vector<vector<double>> &x_flow_return, std::ostream &os) {
 	//Given the tariff's on the roads, it gives the worst case for the leader.
 	//Rerturn's the leader's minimal earning
 	#if _DEBUG
@@ -412,7 +554,7 @@ double Paths::MinimizeLeadersEarning(const vector<double> &q_tariff, const int b
 	IloExpr expr_obj(env);
 	FOR(i,people_n_) {
 		FOR(e,edge_number_) {
-			expr_obj += q_tariff[e]*x[i][e];
+			expr_obj += (q_tariff[e]-arc_buy_p_[g.arcFromId(e)])*x[i][e];
 		}
 	}
 	IloObjective obj(env, expr_obj, IloObjective::Minimize);
@@ -454,6 +596,9 @@ double Paths::MinimizeLeadersEarning(const vector<double> &q_tariff, const int b
 			FOR(i,people_n_) {
 				xr[i] = IloNumArray(env, edge_number_);
 				cplex.getValues(xr[i], x[i]);
+				FOR(e,edge_number_) {
+					x_flow_return[i][e] = xr[i][e];
+				}
 			}
 
 			#if _DEBUG
@@ -468,7 +613,9 @@ double Paths::MinimizeLeadersEarning(const vector<double> &q_tariff, const int b
 			IloNumArray alpha_n(env, n_); cplex.getValues(alpha_n, alpha_negative);
 			os << "Alpha Negativa values are :\n" << alpha_n << "\n";
 
-			
+			FOR(i,people_n_) alpha_pl_return[i] = alpha_p[i];
+			FOR(i,people_n_) alpha_neg_return[i] = alpha_n[i];
+
 			IloNumArray betar(env, n_);
 			FOR(i,n_) {
 				if(beta[0].find(i) != beta[0].end()) {
@@ -478,7 +625,22 @@ double Paths::MinimizeLeadersEarning(const vector<double> &q_tariff, const int b
 				else betar[i] = 0;
 			}
 			os << "Beta values are :\n" << betar << "\n";
-
+			/*
+			FOR(p,people_n_) {
+				#if _DEBUG
+				os << "p: "<< endl;
+				#endif
+				FOR(i,n_) {
+					if(beta[p].find(i) != beta[0].end()) {
+						IloNumVar refb = beta[p][i];
+						beta_return[p][i] = cplex.getValue(refb);
+						#if _DEBUG
+						os << "i : " << i << " value: "<< beta_return[p][i] << endl;
+						#endif
+					}
+				}
+			}
+			*/
 			#endif
 
 			obj_value = cplex.getObjValue();
@@ -866,7 +1028,8 @@ double Paths::FindingTariffWithFiniteUtilities(vector<double> &q_tariff, const i
 
 
 
-void Paths::MoveInUtilitySpace(const vector<vector<double>> &x_flow, int index_of_utility, const vector<vector<double>> &utility) {
+void Paths::MoveInUtilitySpace(const vector<vector<double>> &x_flow, const vector<double> &alpha_plus, const vector<double> &alpha_negative, 
+	const vector<map<int,double>> &beta, int index_of_utility, const vector<vector<double>> &utility) {
 	//Moving in the utility space while keeping the x_flow the optimal answer
 	IloArray<IloNumArray> new_utility(env, people_n_); //vector<double>(edge_number_, 0)
 		
@@ -915,7 +1078,9 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 
 		//Section 3.4. Solver Finding worst case for leader
 			int big_M = 300;
-			MinimizeLeadersEarning(q_tariff, big_M); //hyperparam TODO to-tune
+			vector<double> alpha_pl_return(people_n_); vector<double> alpha_neg_return(people_n_);
+			vector<map<int,double>> beta_return(people_n_); vector<vector<double>> x_flow_return(people_n_, vector<double>(edge_number_)); 
+			MinimizeLeadersEarning(q_tariff, big_M, alpha_pl_return, alpha_neg_return, beta_return, x_flow_return); //hyperparam TODO to-tune
 		
 		//Section 3.5.
 			try{
