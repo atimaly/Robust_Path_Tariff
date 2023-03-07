@@ -28,6 +28,8 @@ using NumMatrix3D = vector<NumMatrix>;
 
 class Graph{
 	protected:
+		//std::random_device rd;  //Will be used to obtain a seed for the random number engine
+		std::mt19937 gen{std::random_device{}()}; //Standard mersenne_twister_engine seeded with rd()
 		int n_;
 		int edge_number_;
 		double erdos_edge_possible_;
@@ -36,6 +38,17 @@ class Graph{
 		Graph(int n, double erdos_p); //You read the input more specially D graph
 
 		Graph(std::istream &is);
+};
+
+
+struct PolyCreator{
+	//The metadata to create a Subset Polyhedra (every constraint is just a subset of variables summed and bounded by an upper value)
+	//Every variable is non negative
+	int row_numb_;
+	int col_numb_;
+	double prob_in_subset_;
+	double max_upper_bound_var_; //The upper bound for the variables it is a unifrom distribution between 0 and max_upper_bound_var_
+	double max_upper_bound_subset_; //The upper bound is a normal distribution around max_upper_bound_ with standard deviation 1
 };
 
 
@@ -53,7 +66,9 @@ class Paths : public Graph {
 
 		//vector<vector<int>> defining_polyhedra_q_;
 		//vector<vector<int>> defining_polyhedra_u_;
-		double leader_max_earn_; 
+		double leader_max_earn_;
+
+		void SubsetPolyhedra();
 		
 		pair<int,int> RandomPath();
 		
@@ -63,17 +78,24 @@ class Paths : public Graph {
 
 		void InitialQValue(vector<double> &q_tariff, std::ostream &os = std::cerr) const;
 
-		double MinimizeLeadersEarning(const vector<double> &q_tariff, const int big_M, std::ostream &os = std::cerr);
+		double MinimizeLeadersEarning(const vector<double> &q_tariff, const int big_M, vector<double> &alpha_pl_return, vector<double> &alpha_neg_return,
+		vector<map<int,double>> &beta_return, vector<vector<double>> &x_flow_return, std::ostream &os = std::cerr);
 
 		double FindingTariffWithFiniteUtilities(vector<double> &q_tariff, const int big_M, std::ostream &os = std::cerr);
 
 		bool SubstantiallyDifferentyUtility(double delta, int index_of_utility, const vector<vector<double>> &utility);
 
-		void MoveInUtilitySpace(const vector<vector<double>> &x_flow, int index_of_utility, const vector<vector<double>> &utility);
+		void MoveInUtilitySpace(const vector<vector<double>> &x_flow, const vector<double> &alpha_plus, const vector<double> &alpha_negative, 
+		const vector<map<int,double>> &beta,int index_of_utility, const vector<vector<double>> &utility);
+
+		
+
+		void PolyhedronPrices(PolyCreator metad); //Creates a random polyhedron for polyhedra_q_ (prices)
+		void PolyhedronUtility(PolyCreator metad);
 
 	public:
 
-		Paths(const int people, const int n, const double erdos_p);
+		Paths(const int people, const int n, const double erdos_p, PolyCreator prices_metad, PolyCreator utility_metad);
 
 		Paths(std::istream &is); //You read the input, more specifically D graph, paths of the people, arc_cost_buy_p, Q polyhedra, U polyhedra
 
