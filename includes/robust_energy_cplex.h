@@ -65,8 +65,8 @@ class Paths : public Graph {
         NumVarMatrix u_{env};
         NumMatrix3D set_of_utilities_;
 
-        vector<vector<int>> defining_polyhedra_q_; //After random problem generation it is filled with the necessary information to write out
-        vector<vector<int>> defining_polyhedra_u_; //After random problem generation it is filled with the necessary information to write out
+        vector<vector<double>> defining_polyhedra_q_; //After random problem generation it is filled with the necessary information to write out
+        vector<vector<double>> defining_polyhedra_u_; //After random problem generation it is filled with the necessary information to write out
 
         double leader_max_earn_;
 

@@ -155,7 +155,15 @@ void Paths::PolyhedronPrices(PolyCreator metad) {
 	char varname[20]; 
 	//Variables and their upper bound
 	std::uniform_int_distribution<> distrib(0,metad.max_upper_bound_var_);
-	FOR(_i,metad.col_numb_) {sprintf(varname, "q_%d", _i); q_.add(IloNumVar(env, 0, distrib(gen), ILOFLOAT, varname));}
+	FOR(i,metad.col_numb_) {
+		vector<double> constraint;
+		sprintf(varname, "q_%d", i);
+		double uppi = distrib(gen);
+		q_.add(IloNumVar(env, 0, uppi, ILOFLOAT, varname));
+		constraint.push_back(1);
+		constraint.push_back(g.id(g.source(g.arcFromId(i)))); constraint.push_back(g.id(g.target(g.arcFromId(i))));
+		defining_polyhedra_q_.push_back(constraint);
+	}
 	//Constraints
 	std::normal_distribution<> norm_d{metad.max_upper_bound_subset_, 1};
 	std::discrete_distribution<> bool_d({1-metad.prob_in_subset_, metad.prob_in_subset_});
@@ -164,10 +172,12 @@ void Paths::PolyhedronPrices(PolyCreator metad) {
 		int how_many_added = 0;
 		while(how_many_added < 2) {
 			IloExpr expr(env);
+			vector<double> constraint;
 			FOR(j,metad.col_numb_) {
 				if(bool_d(gen)) {
 					expr += q_[j];
 					++how_many_added;
+					constraint.push_back(j);
 				}
 			}
 			if(how_many_added >= 2) polyhedra_q_.add(expr <= norm_d(gen));
