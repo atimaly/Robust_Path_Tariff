@@ -155,13 +155,13 @@ void Paths::PolyhedronPrices(PolyCreator metad) {
 	char varname[20]; 
 	//Variables and their upper bound
 	std::uniform_int_distribution<> distrib(0,metad.max_upper_bound_var_);
-	FOR(i,metad.col_numb_) {
+	FOR(_i,metad.col_numb_) {
 		vector<double> constraint;
-		sprintf(varname, "q_%d", i);
+		sprintf(varname, "q_%d", _i);
 		double uppi = distrib(gen);
 		q_.add(IloNumVar(env, 0, uppi, ILOFLOAT, varname));
 		constraint.push_back(1);
-		constraint.push_back(g.id(g.source(g.arcFromId(i)))); constraint.push_back(g.id(g.target(g.arcFromId(i))));
+		constraint.push_back(g.id(g.source(g.arcFromId(_i)))); constraint.push_back(g.id(g.target(g.arcFromId(_i))));
 		defining_polyhedra_q_.push_back(constraint);
 	}
 	//Constraints
