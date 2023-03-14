@@ -204,32 +204,32 @@ src/print_save_data.cpp.s:
 	$(MAKE) -f CMakeFiles/robust_path_tariff.dir/build.make CMakeFiles/robust_path_tariff.dir/src/print_save_data.cpp.s
 .PHONY : src/print_save_data.cpp.s
 
-src/robust_energy_cplex.o: src/robust_energy_cplex.cpp.o
+src/robust_solver.o: src/robust_solver.cpp.o
 
-.PHONY : src/robust_energy_cplex.o
+.PHONY : src/robust_solver.o
 
 # target to build an object file
-src/robust_energy_cplex.cpp.o:
-	$(MAKE) -f CMakeFiles/robust_path_tariff.dir/build.make CMakeFiles/robust_path_tariff.dir/src/robust_energy_cplex.cpp.o
-.PHONY : src/robust_energy_cplex.cpp.o
+src/robust_solver.cpp.o:
+	$(MAKE) -f CMakeFiles/robust_path_tariff.dir/build.make CMakeFiles/robust_path_tariff.dir/src/robust_solver.cpp.o
+.PHONY : src/robust_solver.cpp.o
 
-src/robust_energy_cplex.i: src/robust_energy_cplex.cpp.i
+src/robust_solver.i: src/robust_solver.cpp.i
 
-.PHONY : src/robust_energy_cplex.i
+.PHONY : src/robust_solver.i
 
 # target to preprocess a source file
-src/robust_energy_cplex.cpp.i:
-	$(MAKE) -f CMakeFiles/robust_path_tariff.dir/build.make CMakeFiles/robust_path_tariff.dir/src/robust_energy_cplex.cpp.i
-.PHONY : src/robust_energy_cplex.cpp.i
+src/robust_solver.cpp.i:
+	$(MAKE) -f CMakeFiles/robust_path_tariff.dir/build.make CMakeFiles/robust_path_tariff.dir/src/robust_solver.cpp.i
+.PHONY : src/robust_solver.cpp.i
 
-src/robust_energy_cplex.s: src/robust_energy_cplex.cpp.s
+src/robust_solver.s: src/robust_solver.cpp.s
 
-.PHONY : src/robust_energy_cplex.s
+.PHONY : src/robust_solver.s
 
 # target to generate assembly for a file
-src/robust_energy_cplex.cpp.s:
-	$(MAKE) -f CMakeFiles/robust_path_tariff.dir/build.make CMakeFiles/robust_path_tariff.dir/src/robust_energy_cplex.cpp.s
-.PHONY : src/robust_energy_cplex.cpp.s
+src/robust_solver.cpp.s:
+	$(MAKE) -f CMakeFiles/robust_path_tariff.dir/build.make CMakeFiles/robust_path_tariff.dir/src/robust_solver.cpp.s
+.PHONY : src/robust_solver.cpp.s
 
 src/utility_moving.o: src/utility_moving.cpp.o
 
@@ -276,9 +276,9 @@ help:
 	@echo "... src/print_save_data.o"
 	@echo "... src/print_save_data.i"
 	@echo "... src/print_save_data.s"
-	@echo "... src/robust_energy_cplex.o"
-	@echo "... src/robust_energy_cplex.i"
-	@echo "... src/robust_energy_cplex.s"
+	@echo "... src/robust_solver.o"
+	@echo "... src/robust_solver.i"
+	@echo "... src/robust_solver.s"
 	@echo "... src/utility_moving.o"
 	@echo "... src/utility_moving.i"
 	@echo "... src/utility_moving.s"

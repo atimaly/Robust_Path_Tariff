@@ -96,18 +96,18 @@ CMakeFiles/robust_path_tariff.dir/src/print_save_data.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robust_path_tariff.dir/src/print_save_data.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anarchturandot/Documents/Lemon/lemon-main/contrib/Robust_Path_Tariff/src/print_save_data.cpp -o CMakeFiles/robust_path_tariff.dir/src/print_save_data.cpp.s
 
-CMakeFiles/robust_path_tariff.dir/src/robust_energy_cplex.cpp.o: CMakeFiles/robust_path_tariff.dir/flags.make
-CMakeFiles/robust_path_tariff.dir/src/robust_energy_cplex.cpp.o: ../src/robust_energy_cplex.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anarchturandot/Documents/Lemon/lemon-main/contrib/Robust_Path_Tariff/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/robust_path_tariff.dir/src/robust_energy_cplex.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robust_path_tariff.dir/src/robust_energy_cplex.cpp.o -c /home/anarchturandot/Documents/Lemon/lemon-main/contrib/Robust_Path_Tariff/src/robust_energy_cplex.cpp
+CMakeFiles/robust_path_tariff.dir/src/robust_solver.cpp.o: CMakeFiles/robust_path_tariff.dir/flags.make
+CMakeFiles/robust_path_tariff.dir/src/robust_solver.cpp.o: ../src/robust_solver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anarchturandot/Documents/Lemon/lemon-main/contrib/Robust_Path_Tariff/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/robust_path_tariff.dir/src/robust_solver.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robust_path_tariff.dir/src/robust_solver.cpp.o -c /home/anarchturandot/Documents/Lemon/lemon-main/contrib/Robust_Path_Tariff/src/robust_solver.cpp
 
-CMakeFiles/robust_path_tariff.dir/src/robust_energy_cplex.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robust_path_tariff.dir/src/robust_energy_cplex.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anarchturandot/Documents/Lemon/lemon-main/contrib/Robust_Path_Tariff/src/robust_energy_cplex.cpp > CMakeFiles/robust_path_tariff.dir/src/robust_energy_cplex.cpp.i
+CMakeFiles/robust_path_tariff.dir/src/robust_solver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robust_path_tariff.dir/src/robust_solver.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anarchturandot/Documents/Lemon/lemon-main/contrib/Robust_Path_Tariff/src/robust_solver.cpp > CMakeFiles/robust_path_tariff.dir/src/robust_solver.cpp.i
 
-CMakeFiles/robust_path_tariff.dir/src/robust_energy_cplex.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robust_path_tariff.dir/src/robust_energy_cplex.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anarchturandot/Documents/Lemon/lemon-main/contrib/Robust_Path_Tariff/src/robust_energy_cplex.cpp -o CMakeFiles/robust_path_tariff.dir/src/robust_energy_cplex.cpp.s
+CMakeFiles/robust_path_tariff.dir/src/robust_solver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robust_path_tariff.dir/src/robust_solver.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anarchturandot/Documents/Lemon/lemon-main/contrib/Robust_Path_Tariff/src/robust_solver.cpp -o CMakeFiles/robust_path_tariff.dir/src/robust_solver.cpp.s
 
 CMakeFiles/robust_path_tariff.dir/src/utility_moving.cpp.o: CMakeFiles/robust_path_tariff.dir/flags.make
 CMakeFiles/robust_path_tariff.dir/src/utility_moving.cpp.o: ../src/utility_moving.cpp
@@ -127,7 +127,7 @@ robust_path_tariff_OBJECTS = \
 "CMakeFiles/robust_path_tariff.dir/src/contructors_dest.cpp.o" \
 "CMakeFiles/robust_path_tariff.dir/src/main_cplex.cpp.o" \
 "CMakeFiles/robust_path_tariff.dir/src/print_save_data.cpp.o" \
-"CMakeFiles/robust_path_tariff.dir/src/robust_energy_cplex.cpp.o" \
+"CMakeFiles/robust_path_tariff.dir/src/robust_solver.cpp.o" \
 "CMakeFiles/robust_path_tariff.dir/src/utility_moving.cpp.o"
 
 # External object files for target robust_path_tariff
@@ -136,7 +136,7 @@ robust_path_tariff_EXTERNAL_OBJECTS =
 robust_path_tariff: CMakeFiles/robust_path_tariff.dir/src/contructors_dest.cpp.o
 robust_path_tariff: CMakeFiles/robust_path_tariff.dir/src/main_cplex.cpp.o
 robust_path_tariff: CMakeFiles/robust_path_tariff.dir/src/print_save_data.cpp.o
-robust_path_tariff: CMakeFiles/robust_path_tariff.dir/src/robust_energy_cplex.cpp.o
+robust_path_tariff: CMakeFiles/robust_path_tariff.dir/src/robust_solver.cpp.o
 robust_path_tariff: CMakeFiles/robust_path_tariff.dir/src/utility_moving.cpp.o
 robust_path_tariff: CMakeFiles/robust_path_tariff.dir/build.make
 robust_path_tariff: /opt/ibm/ILOG/CPLEX_Studio201/cplex/lib/x86-64_linux/static_pic/libilocplex.a
