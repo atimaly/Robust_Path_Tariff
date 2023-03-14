@@ -6,9 +6,10 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS "-fdiagnostics-color=always -W -Wshadow -Wall -Wno-unused-result")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -lemon")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D_DEBUG")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D_GENERATE")
 #set(CMAKE_CXX_CLANG_TIDY clang-tidy -checks=-*,readability-*)
 #set(DCMAKE_EXPORT_COMPILE_COMMANDS 1)
-set(CMAKE_CXX_CLANG_TIDY clang-tidy -checks=cppcoreguidelines-*,readability-*, -header-filter=.*)
+#set(CMAKE_CXX_CLANG_TIDY clang-tidy -checks=cppcoreguidelines-*,readability-*, -header-filter=.*)
 #set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 
