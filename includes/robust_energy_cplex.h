@@ -35,6 +35,7 @@ class Graph {
         ListDigraph g;
         map<pair<int, int>, int> pair_to_arc;  //Given a pair in our original indexing it gives back the ListDigraph's matching arc's id
         //map<int, pair<int,int>> arc_to_pair; //Given the arc's id
+	vector<vector<int>> adjacency_list_generated;
 
         Graph(int n, double erdos_p);  //You read the input more specially D graph
 
@@ -72,7 +73,7 @@ class Paths : public Graph {
 
         void SubsetPolyhedra();
 
-        pair<int, int> RandomPath();
+        pair<int, int> RandomPath(); //Create Random Start, Destination for a person 
 
         void RandomPaths();
 
@@ -113,7 +114,7 @@ class Paths : public Graph {
 
         void PrintDataRaw(std::ostream& os) const;
 
-        void SaveGenerated(std::ostream& os);
+        void SaveGenerated(std::ostream& os) const;
 };
 
 #endif  //ROBUST_PATH
@@ -144,6 +145,16 @@ void Print_Matrix(const C& M, std::ostream& os = std::cerr) {
                 for (auto& u : v) {
                         os << u;
                         os << " ";
+                }
+                os << endl;
+        }
+}
+
+template <typename C>
+void Print_MatrixClear(const C& M, std::ostream& os = std::cerr) {
+        for (auto& v : M) {
+                for (auto& u : v) {
+                        os << u << " ";
                 }
                 os << endl;
         }

@@ -67,3 +67,19 @@ void Paths::PrintDataRaw(std::ostream &os) const {
 	/*Print_Matrix(defining_polyhedra_q_, os);
 	Print_Matrix(defining_polyhedra_u_, os);*/
 }
+
+void Paths::SaveGenerated(std::ostream &os) const {
+	os << n_ << endl;
+	Print_Matrix(adjacency_list_generated, os);
+	for (ListDigraph::ArcIt e(g); e != INVALID; ++e) {
+		os << g.id(g.source(e)) << " " << g.id(g.target(e)) << " " << arc_buy_p_[e] << endl;
+	}
+	os << people_n_ << endl;
+	Print_vector_pairs_raw(paths_, os);
+	
+	os << defining_polyhedra_q_.size() << endl;
+	Print_MatrixClear(defining_polyhedra_q_, os);
+
+	os << defining_polyhedra_u_.size() << endl;
+	Print_MatrixClear(defining_polyhedra_u_, os);
+}

@@ -26,6 +26,7 @@ Graph::Graph(int n, double erdos_p) : n_{n},  edge_number_{0}, erdos_edge_possib
 		nodes.push_back(g.addNode());
 	}
 	
+	adjacency_list_generated.resize(n);
 	//Erdős-Renyi Graph Model
 	std::discrete_distribution<> distrib({1-erdos_p, erdos_p});
 	FOR(i,n_) {
@@ -35,6 +36,7 @@ Graph::Graph(int n, double erdos_p) : n_{n},  edge_number_{0}, erdos_edge_possib
 				{
 					auto temp = g.addArc(nodes[i], nodes[j]); ++edge_number_;
 					pair_to_arc[make_pair(i, j)] = g.id(temp);
+					adjacency_list_generated[i].push_back(j); //For storing generated graph
 				}
 		}
 	}
@@ -160,8 +162,12 @@ void Paths::PolyhedronPrices(PolyCreator metad) {
 		sprintf(varname, "q_%d", _i);
 		double uppi = distrib(gen);
 		q_.add(IloNumVar(env, 0, uppi, ILOFLOAT, varname));
+		
+		//Saving the constraints
 		constraint.push_back(1);
 		constraint.push_back(g.id(g.source(g.arcFromId(_i)))); constraint.push_back(g.id(g.target(g.arcFromId(_i))));
+		constraint.push_back(1);
+		constraint.push_back(uppi);
 		defining_polyhedra_q_.push_back(constraint);
 	}
 	//Constraints
@@ -177,10 +183,19 @@ void Paths::PolyhedronPrices(PolyCreator metad) {
 				if(bool_d(gen)) {
 					expr += q_[j];
 					++how_many_added;
-					constraint.push_back(j);
+
+					constraint.push_back(g.id(g.source(g.arcFromId(j))));
+					constraint.push_back(g.id(g.target(g.arcFromId(j))));
+					constraint.push_back(1);
 				}
 			}
-			if(how_many_added >= 2) polyhedra_q_.add(expr <= norm_d(gen));
+			if(how_many_added >= 2) {
+				double uppm = norm_d(gen);
+				polyhedra_q_.add(expr <= uppm);
+				constraint.insert(constraint.begin(), static_cast<int>(constraint.size())/3);
+				constraint.push_back(uppm);
+				defining_polyhedra_q_.push_back(constraint);
+			}
 			else how_many_added = 0;
 		}
 	}
@@ -195,10 +210,21 @@ void Paths::PolyhedronUtility(PolyCreator metad) {
 	u_.setSize(people_n_);
 	FOR(i,people_n_) {
 		u_[i] = IloNumVarArray(env, edge_number_);
+		std::uniform_int_distribution<> uni_d(0,metad.max_upper_bound_var_);
 		FOR(j,edge_number_) {
 			sprintf(varname, "u_%d%d", i, j);
-			std::uniform_int_distribution<> uni_d(0,metad.max_upper_bound_var_);
-			u_[i][j] = IloNumVar(env, 0., uni_d(gen), ILOFLOAT, varname);
+			double uppi = uni_d(gen);
+			u_[i][j] = IloNumVar(env, 0., uppi, ILOFLOAT, varname);
+
+			vector<double> constraint;
+			//Saving the constraints
+			constraint.push_back(1);
+			constraint.push_back(i);
+			constraint.push_back(g.id(g.source(g.arcFromId(j)))); constraint.push_back(g.id(g.target(g.arcFromId(j))));
+			constraint.push_back(1);
+			constraint.push_back(uppi);
+			defining_polyhedra_u_.push_back(constraint);
+
 		}
 	}
 	//Constraints
@@ -209,13 +235,27 @@ void Paths::PolyhedronUtility(PolyCreator metad) {
 			int how_many_added = 0;
 			while(how_many_added < 2) {
 				IloExpr expr(env);
+				vector<double> constraint;
 				FOR(j,edge_number_) {
 					if(bool_d(gen)) {
 						expr += u_[p][j];
 						++how_many_added;
+
+						//Constraings
+						constraint.push_back(g.id(g.source(g.arcFromId(j))));
+						constraint.push_back(g.id(g.target(g.arcFromId(j))));
+						constraint.push_back(1);						
 					}
 				}
-				if(how_many_added >= 2) polyhedra_u_.add(expr <= norm_d(gen));
+				if(how_many_added >= 2) {
+					double uppi = norm_d(gen);
+					polyhedra_u_.add(expr <= uppi);
+					constraint.insert(constraint.begin(), 0);
+					constraint.insert(constraint.begin(), static_cast<int>(constraint.size())/3);
+					constraint.push_back(uppi);
+					defining_polyhedra_u_.push_back(constraint);
+
+				}
 				else how_many_added = 0;
 			}
 		}
@@ -266,7 +306,8 @@ Paths::Paths(std::istream &is) : Graph(is), leader_max_earn_{std::numeric_limits
 	char varname[20];
 
 	//Q
-		int lines; is >> lines;
+	
+	int lines; is >> lines;
         //IloNumVarArray q(env); 
         FOR(_i,edge_number_) {sprintf(varname, "q_%d", _i); q_.add(IloNumVar(env, 0, +IloInfinity, ILOFLOAT, varname));}
 	FOR(i,lines) {
@@ -277,12 +318,13 @@ Paths::Paths(std::istream &is) : Graph(is), leader_max_earn_{std::numeric_limits
 			cerr << "i: " << i << ", _j: " << _j << endl;
 			int u,v; is >> u >> v;
 			double coefficient{1}; is >> coefficient;
+			cerr << "u: " << u << ", v: " << v << ", coefficient: " << coefficient << endl; 
 			expr += coefficient*q_[pair_to_arc[make_pair(u, v)]];
 		}
-	    //ILOFLOAT;
-	    double maxi; is >> maxi;
-	    polyhedra_q_.add(expr <= maxi);
-	    expr.end();
+	
+		double maxi; is >> maxi;
+		polyhedra_q_.add(expr <= maxi);
+		expr.end();
 	}
 
 	#if _DEBUG

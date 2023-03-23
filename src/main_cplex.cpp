@@ -25,6 +25,11 @@ int main(int argc, char** argv) {
 		//fout.close();
 		Test.PrintData();
 		Test.FindingOptimalCost();
+		cerr << "\n\nSaveGenerated: " << endl;
+
+		ofstream fout("generated_test.txt");
+		Test.SaveGenerated(fout);
+		fout.close();
 
 	#endif
 
