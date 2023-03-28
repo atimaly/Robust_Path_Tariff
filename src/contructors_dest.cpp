@@ -60,7 +60,7 @@ Graph::Graph(std::istream &is) : edge_number_{0} {
 			int out; is >> out;
 			auto temp = g.addArc(nodes[i], nodes[out]);
 			pair_to_arc[make_pair(i, out)] = g.id(temp);
-			#if _DEBUG
+			#if _DEBUG_EXTRA
 			cerr << "from " << i << "to " << out << " the index is: " << g.id(temp) << endl;
 			#endif
 		}
@@ -68,14 +68,16 @@ Graph::Graph(std::istream &is) : edge_number_{0} {
 }
 
 Paths::Paths(const int people, const int n, double erdos_p, PolyCreator prices_metad, PolyCreator utility_metad) : Graph(n,erdos_p), people_n_{people}, leader_max_earn_{std::numeric_limits<double>::max()} {
-	
+	//Suppress Cplex output
+	env.setOut(env.getNullStream());
+
 	CreateRandomPeoplePaths(people, n);
 		
 	std::uniform_int_distribution<>uni_d(1,3);
 	FOR(i,edge_number_) {
 		arc_buy_p_[g.arcFromId(i)] = uni_d(gen);
 	}
-	#if _DEBUG
+	#if _DEBUG_EXTRA
 	cerr << "CREATED ARC COSTS FOR THE FIRST AGENT TO PAY:\n";
 	#endif
 	
@@ -83,7 +85,7 @@ Paths::Paths(const int people, const int n, double erdos_p, PolyCreator prices_m
 	prices_metad.col_numb_ = edge_number_;
 	PolyhedronPrices(prices_metad);
 
-	#if _DEBUG
+	#if _DEBUG_EXTRA
 	cerr << "CREATED POLYHEDRA Q(PRICES)\n";
 	cerr << polyhedra_q_ << endl;
 	#endif
@@ -91,7 +93,7 @@ Paths::Paths(const int people, const int n, double erdos_p, PolyCreator prices_m
 	//CreatePolyhedraU (The utility of the second agents)
 	utility_metad.col_numb_ = people_n_;
 	PolyhedronUtility(utility_metad);
-	#if _DEBUG
+	#if _DEBUG_EXTRA
 	cerr << "CREATED POLYHEDRA U(Utility)\n";
 	cerr << polyhedra_u_ << endl;
 	#endif
@@ -104,7 +106,7 @@ void Paths::CreateRandomPeoplePaths(const int people, const int n) {
 	vector<vector<bool>> DP(n_, vector<bool>(n,false));
 	ListDigraph::ArcMap<int> uni_one(g);
 	for (ListDigraph::ArcIt e(g); e != INVALID; ++e) {
-		#if _DEBUG
+		#if _DEBUG_EXTRA
 		cerr << "The id of the current vector: " << g.id(e) << "\n";
 		#endif
 		uni_one[e] = 1;
@@ -119,7 +121,7 @@ void Paths::CreateRandomPeoplePaths(const int people, const int n) {
 				}
 			}
 
-	#if _DEBUG
+	#if _DEBUG_EXTRA
 	cerr << "Floyd Warshall: \n";
 	for(auto &v: DP) {
 		for(auto u : v) {
@@ -144,7 +146,7 @@ void Paths::CreateRandomPeoplePaths(const int people, const int n) {
 
 	}
 
-	#if _DEBUG
+	#if _DEBUG_EXTRA
 	cerr << "People's paths:\n";
 	Print_vector_pairs(paths_);
 	#endif
@@ -241,7 +243,7 @@ void Paths::PolyhedronUtility(PolyCreator metad) {
 						expr += u_[p][j];
 						++how_many_added;
 
-						//Constraings
+						//Constrains
 						constraint.push_back(g.id(g.source(g.arcFromId(j))));
 						constraint.push_back(g.id(g.target(g.arcFromId(j))));
 						constraint.push_back(1);						
@@ -272,12 +274,16 @@ Paths::Paths(std::istream &is) : Graph(is), leader_max_earn_{std::numeric_limits
 	// the ith line starts with the number of variables in the inequalities, then
 	// the indexes of the q variables in the inequality  // the numbers are in the following form "alpha x", where alpha is the coefficient of x 
 	// the final number on the line is the upper limit of the inequality
-    #if _DEBUG
+	
+	//Suppress Cplex output
+	env.setOut(env.getNullStream());
+
+    #if _DEBUG_EXTRA
     cerr << "Graph is in" << endl;
 	PrintData();
     #endif
 
-	#if _DEBUG
+	#if _DEBUG_EXTRA
     cerr << "arc_buy_p" << endl;
     #endif
 
@@ -288,7 +294,7 @@ Paths::Paths(std::istream &is) : Graph(is), leader_max_earn_{std::numeric_limits
 			arc_buy_p_[g.arcFromId(pair_to_arc[make_pair(u, v)])] = cost_p;
 		}
 
-	#if _DEBUG
+	#if _DEBUG_EXTRA
     cerr << "-------------PEOPLE'S PATHS----------" << endl;
     #endif
 
@@ -299,7 +305,7 @@ Paths::Paths(std::istream &is) : Graph(is), leader_max_earn_{std::numeric_limits
 			paths_.push_back(make_pair(t1, t2));
 		}
 
-	#if _DEBUG
+	#if _DEBUG_EXTRA
     cerr << "-------------Q POLYHEDRA READING IN-------------" << endl;
     #endif
 
@@ -327,7 +333,7 @@ Paths::Paths(std::istream &is) : Graph(is), leader_max_earn_{std::numeric_limits
 		expr.end();
 	}
 
-	#if _DEBUG
+	#if _DEBUG_EXTRA
 	
 	IloCplex cplex(polyhedra_q_);
 	cplex.exportModel("PROBLEM_Q.lp");
@@ -363,7 +369,7 @@ Paths::Paths(std::istream &is) : Graph(is), leader_max_earn_{std::numeric_limits
 			expr.end();
 		}
 		
-	#if _DEBUG
+	#if _DEBUG_EXTRA
 	
 	IloCplex cplex2(polyhedra_u_);
 	cplex2.exportModel("PROBLEM_U.lp");
