@@ -87,10 +87,10 @@ class Paths : public Graph {
 
         double FindingTariffWithFiniteUtilities(vector<double>& q_tariff, const int big_M, std::ostream& os = std::cerr);
 
-        bool SubstantiallyDifferentyUtility(double delta, int index_of_utility, const vector<vector<double>>& utility);
+        bool SubstantiallyDifferentyUtility(double delta, int index_of_utility);
 
         void MoveInUtilitySpace(const vector<vector<double>>& x_flow, const vector<double>& alpha_plus, const vector<double>& alpha_negative,
-                                const vector<map<int, double>>& beta, int index_of_utility, const vector<vector<double>>& utility);
+                                const vector<map<int, double>>& beta, int index_of_utility);
 
         //For Constructors
         void CreateRandomPeoplePaths(int people, int n);

@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #include <cstdio>
+#include <ilconcert/iloalg.h>
 #include <ilconcert/iloenv.h>
 #include <ilconcert/iloexpression.h>
 #include <limits>
@@ -50,7 +51,7 @@ void Paths::PerturbationOfq(vector<double> &q_tariff, const double delta, std::o
 	//assert( != end());
 
 	#if _DEBUG
-	os << "\nFirst index T star: " << first_non_negative << endl;
+	os << "\nFirst index T start: " << first_non_negative << endl;
 	#endif
 
 	FOR(i,static_cast<int>(q_indexed.size())) {
@@ -136,7 +137,7 @@ double Paths::MinimizeLeadersEarning(const vector<double> &q_tariff, const int b
 	IloModel model(env);
 	// u \in U
 		model.add(polyhedra_u_); //Hindering utilities
-	#if _DEBUG
+	#if _DEBUG_EXTRA
     cerr << "-------IMPORTED POLYHEDRA U-------" << endl;
     #endif
 
@@ -149,7 +150,7 @@ double Paths::MinimizeLeadersEarning(const vector<double> &q_tariff, const int b
 		}
 	}
 
-	#if _DEBUG
+	#if _DEBUG_EXTRA
     cerr << "-------DEFINING X-------" << endl;
     #endif
 
@@ -196,7 +197,7 @@ double Paths::MinimizeLeadersEarning(const vector<double> &q_tariff, const int b
 
 	}
 
-	#if _DEBUG
+	#if _DEBUG_EXTRA
     cerr << "-------ALPHAS DEFINED-------" << endl;
     #endif
 	
@@ -237,7 +238,7 @@ double Paths::MinimizeLeadersEarning(const vector<double> &q_tariff, const int b
 	}
 	
 
-	#if _DEBUG
+	#if _DEBUG_EXTRA
     cerr << "-------BETA DEFINED-------" << endl;
     #endif
 
@@ -265,7 +266,7 @@ double Paths::MinimizeLeadersEarning(const vector<double> &q_tariff, const int b
 		}
 	}
 
-	#if _DEBUG
+	#if _DEBUG_EXTRA
     cerr << "-------DUAL OPTIMALITY DEFINED-------" << endl;
     #endif
 
@@ -279,7 +280,7 @@ double Paths::MinimizeLeadersEarning(const vector<double> &q_tariff, const int b
 	IloObjective obj(env, expr_obj, IloObjective::Minimize);
 	model.add(obj);
 
-	#if _DEBUG
+	#if _DEBUG_EXTRA
     cerr << "-------OBJECTIVE DEFINED-------" << endl;
     #endif
 
@@ -337,18 +338,30 @@ double Paths::MinimizeLeadersEarning(const vector<double> &q_tariff, const int b
 				FOR(i,people_n_) alpha_pl_return[i] = alpha_p[i];
 				FOR(i,people_n_) alpha_neg_return[i] = alpha_n[i];
 				
-				/*
-				IloNumArray betar(env, n_);
-				FOR(i,n_) {
-					if(beta[0].find(i) != beta[0].end()) {
-						cerr << "Beta asking: " << i << " vertex for 0. person" << endl;
-						IloNumVar refb = beta[0][i];
-						betar[i] = cplex.getValue(refb);
-						cerr << "Got the asked vertex" << endl;
+				
+				vector<IloNumArray> betar_all(people_n_);
+				FOR(j,people_n_) {
+					//os << "BETA: " << j << endl;
+					FOR(i,n_) {
+						betar_all[j] = IloNumArray(env, n_);
+						if(beta[j].find(i) != beta[j].end()) {
+							//cerr << "Beta asking: " << i << " vertex for 0. person" << endl;
+							IloNumVar refb = beta[j][i];
+							try{
+								betar_all[j][i] = cplex.getValue(refb);
+							}
+							catch(IloAlgorithm::NotExtractedException) {
+								//cerr << "Didn' t get the vertex " << i << endl;
+								betar_all[j][i] = 0;
+							}
+						}
+						else betar_all[j][i] = 0;
 					}
-					else betar[i] = 0;
 				}
-				os << "Beta values are :\n" << betar << "\n";*/
+				os << "Beta values are :\n";
+				FOR(j,people_n_)
+					os << "For the person: " <<  j << "\n\t"  << betar_all[j] << "\n";
+				
 				/*
 				FOR(p,people_n_) {
 					#if _DEBUG
@@ -437,7 +450,7 @@ double Paths::FindingTariffWithFiniteUtilities(vector<double> &q_tariff, const i
     cerr << "\n\n-------FindingTariffWithFiniteUtilities BEGIN-------" << endl;
     #endif
 
-	#if _DEBUG
+	#if _DEBUG_EXTRA
     cerr << "-------IMPORTED POLYHEDRA U-------" << endl;
     #endif
 
@@ -453,7 +466,7 @@ double Paths::FindingTariffWithFiniteUtilities(vector<double> &q_tariff, const i
 		}
 	}
 
-	#if _DEBUG
+	#if _DEBUG_EXTRA
     cerr << "-------DEFINING X-------" << endl;
     #endif
 
@@ -505,7 +518,7 @@ double Paths::FindingTariffWithFiniteUtilities(vector<double> &q_tariff, const i
 		}
 	}
 
-	#if _DEBUG
+	#if _DEBUG_EXTRA
     cerr << "-------ALPHAS DEFINED-------" << endl;
     #endif
 	
@@ -544,7 +557,7 @@ double Paths::FindingTariffWithFiniteUtilities(vector<double> &q_tariff, const i
 		}
 	}	
 
-	#if _DEBUG
+	#if _DEBUG_EXTRA
     cerr << "-------BETA DEFINED-------" << endl;
     #endif
 	FOR(k,utility_quantity) {
@@ -573,7 +586,7 @@ double Paths::FindingTariffWithFiniteUtilities(vector<double> &q_tariff, const i
 		}
 	}
 
-	#if _DEBUG
+	#if _DEBUG_EXTRA
     cerr << "-------DUAL OPTIMALITY DEFINED-------" << endl;
     #endif
 
@@ -612,14 +625,14 @@ double Paths::FindingTariffWithFiniteUtilities(vector<double> &q_tariff, const i
 		expr.end();
 	}
 
-	#if _DEBUG
+	#if _DEBUG_EXTRA
     cerr << "-------CONSTRAINTS ON Z DEFINED-------" << endl;
     #endif
 
 	IloObjective obj(env, Z, IloObjective::Maximize);
 	model.add(obj);
 
-	#if _DEBUG
+	#if _DEBUG_EXTRA
 	cerr << "-------OBJECTIVE DEFINED-------" << endl;
 	#endif
 
@@ -774,7 +787,9 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 	int iteration{4};
 	FOR(i,iteration) {
 		#if _DEBUG
-		os << "---------------------ITERATION: " << i << " ----------------------------\n";
+		os << "\n\n------------------------------------------------------------------------------------\n";
+		os << "---------------------ITERATION: " << i << " --------------------------------------------\n";
+		os << "------------------------------------------------------------------------------------\n\n";
 		#endif
 		//Petrubate q_tariff
 			PerturbationOfq(q_tariff, 0.01);
@@ -793,6 +808,20 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 			catch(INFEASIBLE) {
 				os << "The program has become Infeasible ending it here.\n"; 
 				break;
+			}
+
+			int how_different{0};
+			FOR(si,static_cast<int>(set_of_utilities_.size())-1) {
+				if(SubstantiallyDifferentyUtility(0.1, si)) {
+					++how_different;
+				}
+			}
+			#if _DEBUG
+			os << "The new utility is " << how_different << " different and there are " << static_cast<int>(set_of_utilities_.size())-1 << " amount of utilities." << endl;
+			#endif
+
+			if(how_different != static_cast<int>(set_of_utilities_.size())-1) {
+				
 			}
 
 			os << "\n\nCurrent set of utilities: " << endl;

@@ -15,7 +15,8 @@ using namespace lemon;
 
 
 int main(int argc, char** argv) {
-	#if _GENERATE
+	
+	if(argc < 2) {
 		PolyCreator prices_metad{4, 0, 0.1, 3, 5};
 		
 		PolyCreator utility_metad = prices_metad;
@@ -30,14 +31,13 @@ int main(int argc, char** argv) {
 		ofstream fout("generated_test.txt");
 		Test.SaveGenerated(fout);
 		fout.close();
+	}
+	else {
+		assert(argc >= 2);
+		ifstream fin(argv[1]);
+		Paths Test(fin);
+		fin.close();
+		Test.FindingOptimalCost();
+	}
 
-	#endif
-
-	#if ! defined(_GENERATE)
-	assert(argc >= 2);
-	ifstream fin(argv[1]);
-	Paths Test(fin);
-	fin.close();
-	Test.FindingOptimalCost();
-	#endif
 }

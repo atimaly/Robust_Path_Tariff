@@ -73,7 +73,7 @@ Paths::Paths(const int people, const int n, double erdos_p, PolyCreator prices_m
 
 	CreateRandomPeoplePaths(people, n);
 		
-	std::uniform_int_distribution<>uni_d(1,3);
+	std::uniform_int_distribution<>uni_d(1,3); //TO-TUNE uniform
 	FOR(i,edge_number_) {
 		arc_buy_p_[g.arcFromId(i)] = uni_d(gen);
 	}
@@ -321,10 +321,14 @@ Paths::Paths(std::istream &is) : Graph(is), leader_max_earn_{std::numeric_limits
     		IloExpr expr(env);
 		FOR(_j,variab) {
 			//int indi; is >> indi;
+			#if _DEBUG_EXTRA
 			cerr << "i: " << i << ", _j: " << _j << endl;
+			#endif
 			int u,v; is >> u >> v;
 			double coefficient{1}; is >> coefficient;
-			cerr << "u: " << u << ", v: " << v << ", coefficient: " << coefficient << endl; 
+			#if _DEBUG_EXTRA
+			cerr << "u: " << u << ", v: " << v << ", coefficient: " << coefficient << endl;
+			#endif
 			expr += coefficient*q_[pair_to_arc[make_pair(u, v)]];
 		}
 	
@@ -358,7 +362,9 @@ Paths::Paths(std::istream &is) : Graph(is), leader_max_earn_{std::numeric_limits
 			IloExpr expr(env);
 			int person; is >> person;
 			FOR(_j, variab) {
+				#if _DEBUG_EXTRA
 				cerr << "i: " << i << " _j: " << _j << endl;
+				#endif
 				int u,v; is >> u >> v;
 				double coeff{1}; is >> coeff;
 				expr += coeff*u_[person][pair_to_arc[make_pair(u, v)]];
