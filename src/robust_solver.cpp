@@ -1,8 +1,10 @@
 #include <bits/stdc++.h>
+#include <algorithm>
 #include <cstdio>
 #include <ilconcert/iloalg.h>
 #include <ilconcert/iloenv.h>
 #include <ilconcert/iloexpression.h>
+#include <iterator>
 #include <limits>
 #include <random>
 #include <lemon/list_graph.h>
@@ -784,7 +786,8 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 		*/
 	
 	//double leader_max_earn_{-1};
-	int iteration{4};
+	int iteration{9};
+	set<double> all_of_leaders_earnings;
 	FOR(i,iteration) {
 		#if _DEBUG
 		os << "\n\n------------------------------------------------------------------------------------\n";
@@ -804,6 +807,7 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 			try{
 				double leader_earn = FindingTariffWithFiniteUtilities(q_tariff, big_M);
 				leader_max_earn_ = std::min(leader_earn, leader_max_earn_);
+				all_of_leaders_earnings.insert(leader_earn);
 			}
 			catch(INFEASIBLE) {
 				os << "The program has become Infeasible ending it here.\n"; 
@@ -820,14 +824,44 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 			os << "The new utility is " << how_different << " different and there are " << static_cast<int>(set_of_utilities_.size())-1 << " amount of utilities." << endl;
 			#endif
 
+			os << "\n\nCurrent set of utilities: " << endl;
+			Print_vector(set_of_utilities_, os);
+			
 			if(how_different != static_cast<int>(set_of_utilities_.size())-1) {
-				
+				vector<double> movement_delta(static_cast<int>(set_of_utilities_.size()));
+				FOR(si,static_cast<int>(set_of_utilities_.size())-1) {
+					movement_delta[si] = MoveInUtilitySpace(x_flow_return, si);
+					os << "The current delta for: " << si << " is " << movement_delta[si] << endl;
+				}
+				auto maxi_delta = std::max_element(movement_delta.begin(), movement_delta.end());
+				int indi_delta = std::distance(movement_delta.begin(), maxi_delta);
+
+				NumMatrix nu_best(env, people_n_);
+				FOR(j,people_n_) {
+					nu_best[j] = IloNumArray(env, edge_number_);
+					FOR(e,edge_number_) {
+						nu_best[j][e] = - set_of_utilities_[static_cast<int>(set_of_utilities_.size())-1][j][e] + set_of_utilities_[indi_delta][j][e];
+					}
+				}
+
+				NumMatrix new_util(env, people_n_);
+				FOR(j,people_n_) {
+					new_util[j] = IloNumArray(env, edge_number_);
+					FOR(e,edge_number_) {
+						new_util[j][e] = set_of_utilities_[static_cast<int>(set_of_utilities_.size())-1][j][e] + (*maxi_delta)*nu_best[j][e];
+					}
+				}
+
+				set_of_utilities_.pop_back();
+				set_of_utilities_.push_back(new_util);
 			}
 
 			os << "\n\nCurrent set of utilities: " << endl;
 			Print_vector(set_of_utilities_, os);
 
 			os << "Leader's current maximum profit: " << leader_max_earn_ << endl << endl;
+			os << "Every leader's profit we have encountered" << endl;
+			Print_vector(all_of_leaders_earnings, os);
 			//PrintData();
 	}
 	os << "Final Values:\n";

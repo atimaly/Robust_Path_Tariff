@@ -89,8 +89,7 @@ class Paths : public Graph {
 
         bool SubstantiallyDifferentyUtility(double delta, int index_of_utility);
 
-        void MoveInUtilitySpace(const vector<vector<double>>& x_flow, const vector<double>& alpha_plus, const vector<double>& alpha_negative,
-                                const vector<map<int, double>>& beta, int index_of_utility);
+        double MoveInUtilitySpace(const vector<vector<double>>& x_flow, int index_of_utility, std::ostream& os = std::cerr);
 
         //For Constructors
         void CreateRandomPeoplePaths(int people, int n);
