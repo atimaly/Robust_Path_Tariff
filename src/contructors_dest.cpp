@@ -347,7 +347,7 @@ Paths::Paths(std::istream &is) : Graph(is), leader_max_earn_{std::numeric_limits
     #endif
 
 	//U
-		is >> lines; u_.setSize(people_n_); //defining_polyhedra_u_.resize(lines);
+		is >> lines; u_.setSize(people_n_); defining_polyhedra_u_.resize(lines);
 		FOR(i,people_n_) {
 			u_[i] = IloNumVarArray(env, edge_number_);
 			FOR(j,edge_number_) {
@@ -358,22 +358,26 @@ Paths::Paths(std::istream &is) : Graph(is), leader_max_earn_{std::numeric_limits
 		
 		FOR(i, lines) {
 			int variab;
-			is >> variab; //defining_polyhedra_u_[i].push_back(variab);
+			is >> variab; defining_polyhedra_u_[i].push_back(variab);
 			IloExpr expr(env);
-			int person; is >> person; // defining_polyhedra_u_[i].push_back(person);
+			int person; is >> person;  defining_polyhedra_u_[i].push_back(person);
 			FOR(_j, variab) {
 				#if _DEBUG_EXTRA
 				cerr << "i: " << i << " _j: " << _j << endl;
 				#endif
-				int u,v; is >> u >> v; // defining_polyhedra_u_[i].push_back(u); defining_polyhedra_u_[i].push_back(v);
-				double coeff{1}; is >> coeff; // defining_polyhedra_u_[i].push_back(coeff);
+				int u,v; is >> u >> v;  defining_polyhedra_u_[i].push_back(u); defining_polyhedra_u_[i].push_back(v);
+				double coeff{1}; is >> coeff;  defining_polyhedra_u_[i].push_back(coeff);
 				expr += coeff*u_[person][pair_to_arc[make_pair(u, v)]];
 			}
 			double maxi;
-			is >> maxi; // defining_polyhedra_u_[i].push_back(maxi);
+			is >> maxi; defining_polyhedra_u_[i].push_back(maxi);
 			polyhedra_u_.add(expr <= maxi);
 			expr.end();
 		}
+	#if _DEBUG_EXTRA
+		cerr << "The saved u polyhedra is the following.\n";
+		Print_Matrix(defining_polyhedra_u_);
+	#endif
 		
 	#if _DEBUG_EXTRA
 	

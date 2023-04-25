@@ -20,7 +20,7 @@
 using namespace lemon;
 using namespace std;
 
-double Paths::MoveInUtilitySpace(const vector<vector<double>> &x_flow, int index_of_utility, std::ostream &os) {
+double Paths::MoveInUtilitySpace(const vector<vector<double>> &x_flow, int index_of_utility, NumMatrix &u_sol, std::ostream &os) {
 	//Moving in the utility space while keeping the x_flow the optimal answer
 	//IloArray<IloNumArray> new_utility(env, people_n_); //vector<double>(edge_number_, 0)
 	
@@ -28,7 +28,37 @@ double Paths::MoveInUtilitySpace(const vector<vector<double>> &x_flow, int index
 	char varname[20];
 
 	//add Q poly
-		model.add(polyhedra_q_);
+		//model.add(polyhedra_q_);
+	
+	//Q poly for the u to from which we move
+		NumVarMatrix u_sub(env);
+		u_sub.setSize(people_n_); 
+		FOR(i,people_n_) {
+			u_sub[i] = IloNumVarArray(env, edge_number_);
+			FOR(j,edge_number_) {
+				sprintf(varname, "u_sub_%d%d", i, j);
+				u_sub[i][j] = IloNumVar(env, 0., +IloInfinity, ILOFLOAT, varname);
+			}
+		}
+		int lines = static_cast<int>(defining_polyhedra_u_.size());
+		FOR(i, lines) {
+			int variab = defining_polyhedra_u_[i][0];
+			IloExpr expr(env);
+			int person = defining_polyhedra_u_[i][1];
+			int indi_vs = 2;
+			FOR(_j, variab) {
+				#if _DEBUG_EXTRA
+				cerr << "i: " << i << " _j: " << _j << endl;
+				#endif
+				int u = defining_polyhedra_u_[i][indi_vs]; ++indi_vs;
+				int v = defining_polyhedra_u_[i][indi_vs]; ++indi_vs;
+				double coeff = defining_polyhedra_u_[i][indi_vs]; ++indi_vs;
+				expr += coeff*u_sub[person][pair_to_arc[make_pair(u, v)]];
+			}
+			double maxi = defining_polyhedra_u_[i].back();
+			model.add(expr <= maxi);
+			expr.end();
+		}
 	
 	//add U poly
 		model.add(polyhedra_u_);
@@ -42,14 +72,16 @@ double Paths::MoveInUtilitySpace(const vector<vector<double>> &x_flow, int index
 		FOR(j,people_n_) {
 			nu[j] = IloNumArray(env, edge_number_);
 			FOR(e,edge_number_) {
-				nu[j][e] = set_of_utilities_[static_cast<int>(set_of_utilities_.size())-1][j][e] - set_of_utilities_[index_of_utility][j][e];
+				nu[j][e] = static_cast<float>(set_of_utilities_[static_cast<int>(set_of_utilities_.size())-1][j][e]) - static_cast<float>(set_of_utilities_[index_of_utility][j][e]);
 			}
 		}
 
 	//u_0 + \nu * delta \in U
 		FOR(j,people_n_) {
 			FOR(e,edge_number_) {
-				model.add(u_[j][e] == Delta*nu[j][e] + set_of_utilities_[index_of_utility][j][e]);
+				model.add(u_sub[j][e] == Delta*nu[j][e] + set_of_utilities_[index_of_utility][j][e]);
+				//model.add(u_[j][e] == Delta*nu[j][e] + set_of_utilities_[index_of_utility][j][e]);
+				// u_sub[j][e]);
 			}
 		}
 	
@@ -127,7 +159,7 @@ double Paths::MoveInUtilitySpace(const vector<vector<double>> &x_flow, int index
 				if(paths_[j].first != source && paths_[j].second != source) {
 					expr -= beta[j][source];
 				}
-				expr += q_[e] + u_[j][e];
+				expr += q_[e] + u_sub[j][e];
 				model.add(expr <= 0);
 				
 			}
@@ -148,12 +180,27 @@ double Paths::MoveInUtilitySpace(const vector<vector<double>> &x_flow, int index
 		case IloAlgorithm::Optimal:
 			obj_value = cplex.getObjValue();
 			os << "THE OPT SOL is " << obj_value << endl;
+			FOR(i,people_n_) {
+				u_sol[i] = IloNumArray(env, edge_number_);
+				FOR(e,edge_number_) {
+					try{
+						u_sol[i][e] = cplex.getValue(u_sub[i][e]);
+					}
+					catch(IloAlgorithm::NotExtractedException) {
+						//cerr << "Didn' t get the vertex " << i << endl;
+						u_sol[i][e] = 0;
+					}
+				}
+				//cplex.getValues(u_sol[i], u_sub[i]);
+			}
 			break;
 		case IloAlgorithm::Unbounded:
-			os << "THE PROBLEM IS UNBOUNDED:\n";
+			os << "THE PROBLEM IS UNBOUNDED:\n";return std::numeric_limits<double>::min();
+
 			break;
 		case IloAlgorithm::Infeasible:
-			os << "THE PROBLEM IS Infeasible:\n";
+			os << "THE PROBLEM IS Infeasible:\n";return std::numeric_limits<double>::min();
+
 			break;
 		
 		case IloAlgorithm::Error:
@@ -161,11 +208,13 @@ double Paths::MoveInUtilitySpace(const vector<vector<double>> &x_flow, int index
 			break;
 
 		case IloAlgorithm::Feasible:
-			os << "THE PROBLEM is FEASIBLE:\n";
+			os << "THE PROBLEM is FEASIBLE:\n";return std::numeric_limits<double>::min();
+
 			break;
 		
 		case IloAlgorithm::InfeasibleOrUnbounded:
 			os << "THE PROBLEM is InFEASIBLE or Unbounded:\n";
+			return std::numeric_limits<double>::min();
 			break;
 		
 		case IloAlgorithm::Unknown:
@@ -176,6 +225,12 @@ double Paths::MoveInUtilitySpace(const vector<vector<double>> &x_flow, int index
 			break;
 	}
 
+	beta.end();
+	alpha_negative.end();
+	alpha_plus.end();
+	u_sub.end();
+	Delta.end();
+	model.end();
 	return obj_value;
 }
 
@@ -183,20 +238,64 @@ bool Paths::SubstantiallyDifferentyUtility(double delta , int index_of_utility) 
 	//Check wether the utility at the of index_of_utility in set_of_utilities_ is substantially different than utility
 	//The utility we check is the last one in the set_of_utilities_  
 	int last_util = static_cast<int>(set_of_utilities_.size())-1;
+	double all_diff{0};
 	FOR(i,people_n_) {
 		FOR(e,edge_number_) {
+			all_diff += std::abs(set_of_utilities_[last_util][i][e] - set_of_utilities_[index_of_utility][i][e]);
+			
 			if(delta <= std::abs(set_of_utilities_[last_util][i][e] - set_of_utilities_[index_of_utility][i][e])) {
 				return true;
 			}
 		}
 	}	
-	
+	/*
+	if(all_diff <= delta) {
+		return false;
+	}*/
+
 	return false;
 }
-/*
-bool HalvingUtilityMoving(int index_of_utility) {
+
+void Paths::UtilityMovingIfDifferent(vector<vector<double>> &x_flow, std::ostream &os) {
+	
+	vector<double> movement_delta(static_cast<int>(set_of_utilities_.size()));
+	NumMatrix3D u_vals(static_cast<int>(set_of_utilities_.size())-1);
+	FOR(si,static_cast<int>(set_of_utilities_.size())-1) {
+		u_vals[si] = NumMatrix(env, people_n_); //Save the utility value for later use
+		movement_delta[si] = MoveInUtilitySpace(x_flow, si, u_vals[si]);
+		os << "The current delta for: " << si << " is " << movement_delta[si] << endl;
+	}
+	auto maxi_delta = std::max_element(movement_delta.begin(), movement_delta.end());
+	int indi_delta = std::distance(movement_delta.begin(), maxi_delta);
+	if(*maxi_delta == std::numeric_limits<double>::min()) {
+		set_of_utilities_.pop_back();
+		return;
+	}
+	/*
+	NumMatrix nu_best(env, people_n_);
+	FOR(j,people_n_) {
+		nu_best[j] = IloNumArray(env, edge_number_);
+		FOR(e,edge_number_) {
+			nu_best[j][e] = + set_of_utilities_[static_cast<int>(set_of_utilities_.size())-1][j][e] - set_of_utilities_[indi_delta][j][e];
+		}
+	}
+
+	NumMatrix new_util(env, people_n_);
+	FOR(j,people_n_) {
+		new_util[j] = IloNumArray(env, edge_number_);
+		FOR(e,edge_number_) {
+			new_util[j][e] = set_of_utilities_[static_cast<int>(set_of_utilities_.size())-1][j][e] + (*maxi_delta)*nu_best[j][e];
+		}
+	}*/
+
+	set_of_utilities_.pop_back();
+	set_of_utilities_.push_back(u_vals[indi_delta]);
+
+}
+
+bool HalvingUtilityMoving(vector<int> &index_to_be_vertices) {
 	//This program checks if the index_of_utility-th set_of_utilities_ and the last of set_of_utilities_ half is in U
 	
 
 }
-*/
+

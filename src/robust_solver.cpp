@@ -425,6 +425,7 @@ double Paths::MinimizeLeadersEarning(const vector<double> &q_tariff, const int b
 	x.end();
 	alpha_plus.end();
 	alpha_negative.end();
+	beta.end();
 	model.end();
 
 	#if _DEBUG
@@ -576,6 +577,9 @@ double Paths::FindingTariffWithFiniteUtilities(vector<double> &q_tariff, const i
 				if(paths_[j].first != source && paths_[j].second != source) {
 					expr -= beta[k][j][source];
 				}
+				#if _DEBUG_EXTRA
+				cerr << "Trying to reach the " << k << "th utility" << endl;
+				#endif
 				expr -= q_[e] + set_of_utilities_[k][j][e];
 				model.add(expr <= 0);
 
@@ -759,6 +763,7 @@ double Paths::FindingTariffWithFiniteUtilities(vector<double> &q_tariff, const i
 	x.end();
 	alpha_plus.end();
 	alpha_negative.end();
+	beta.end();
 	model.end();
 
 	#if _DEBUG
@@ -786,7 +791,7 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 		*/
 	
 	//double leader_max_earn_{-1};
-	int iteration{9};
+	int iteration{3};
 	set<double> all_of_leaders_earnings;
 	FOR(i,iteration) {
 		#if _DEBUG
@@ -795,7 +800,7 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 		os << "------------------------------------------------------------------------------------\n\n";
 		#endif
 		//Petrubate q_tariff
-			PerturbationOfq(q_tariff, 0.01);
+			//PerturbationOfq(q_tariff, 0.01);
 
 		//Section 3.4. Solver Finding worst case for leader
 			int big_M = 300;
@@ -807,7 +812,7 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 			try{
 				double leader_earn = FindingTariffWithFiniteUtilities(q_tariff, big_M);
 				leader_max_earn_ = std::min(leader_earn, leader_max_earn_);
-				all_of_leaders_earnings.insert(leader_earn);
+				all_of_leaders_earnings.insert(floor(leader_earn * 1000.0) / 1000.0);
 			}
 			catch(INFEASIBLE) {
 				os << "The program has become Infeasible ending it here.\n"; 
@@ -827,33 +832,9 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 			os << "\n\nCurrent set of utilities: " << endl;
 			Print_vector(set_of_utilities_, os);
 			
+			//The new utility is not that different
 			if(how_different != static_cast<int>(set_of_utilities_.size())-1) {
-				vector<double> movement_delta(static_cast<int>(set_of_utilities_.size()));
-				FOR(si,static_cast<int>(set_of_utilities_.size())-1) {
-					movement_delta[si] = MoveInUtilitySpace(x_flow_return, si);
-					os << "The current delta for: " << si << " is " << movement_delta[si] << endl;
-				}
-				auto maxi_delta = std::max_element(movement_delta.begin(), movement_delta.end());
-				int indi_delta = std::distance(movement_delta.begin(), maxi_delta);
-
-				NumMatrix nu_best(env, people_n_);
-				FOR(j,people_n_) {
-					nu_best[j] = IloNumArray(env, edge_number_);
-					FOR(e,edge_number_) {
-						nu_best[j][e] = - set_of_utilities_[static_cast<int>(set_of_utilities_.size())-1][j][e] + set_of_utilities_[indi_delta][j][e];
-					}
-				}
-
-				NumMatrix new_util(env, people_n_);
-				FOR(j,people_n_) {
-					new_util[j] = IloNumArray(env, edge_number_);
-					FOR(e,edge_number_) {
-						new_util[j][e] = set_of_utilities_[static_cast<int>(set_of_utilities_.size())-1][j][e] + (*maxi_delta)*nu_best[j][e];
-					}
-				}
-
-				set_of_utilities_.pop_back();
-				set_of_utilities_.push_back(new_util);
+				UtilityMovingIfDifferent(x_flow_return);
 			}
 
 			os << "\n\nCurrent set of utilities: " << endl;
@@ -862,6 +843,10 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 			os << "Leader's current maximum profit: " << leader_max_earn_ << endl << endl;
 			os << "Every leader's profit we have encountered" << endl;
 			Print_vector(all_of_leaders_earnings, os);
+
+			if(static_cast<int>(all_of_leaders_earnings.size()) >= 3) {
+				break;
+			}
 			//PrintData();
 	}
 	os << "Final Values:\n";
