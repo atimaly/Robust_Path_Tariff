@@ -777,22 +777,11 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 	//Getting an initial q value saving it in arc_cost_q_
 		vector<double> q_tariff;
 		InitialQValue(q_tariff);
-		/*
-		for (ListDigraph::ArcIt e(g); e != INVALID; ++e) {
-			#if _DEBUG
-			os << "The id of the current vector: " << g.id(e) << "\n";
-			#endif
-			q_tariff.push_back(arc_cost_q_[e]);
-		}
-		#if _DEBUG
-		os << "After playing in vector q_tariff:\n";
-		Print_vector(q_tariff, os);
-		#endif
-		*/
-	
+			
 	//double leader_max_earn_{-1};
-	int iteration{3};
+	int iteration{4};
 	set<double> all_of_leaders_earnings;
+	set<vector<double>> all_of_q_tariffs;
 	FOR(i,iteration) {
 		#if _DEBUG
 		os << "\n\n------------------------------------------------------------------------------------\n";
@@ -800,13 +789,15 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 		os << "------------------------------------------------------------------------------------\n\n";
 		#endif
 		//Petrubate q_tariff
-			//PerturbationOfq(q_tariff, 0.01);
+			PerturbationOfq(q_tariff, 0.01);
+
+		all_of_q_tariffs.insert(q_tariff); //To check if it changes
 
 		//Section 3.4. Solver Finding worst case for leader
 			int big_M = 300;
 			vector<double> alpha_pl_return(people_n_); vector<double> alpha_neg_return(people_n_);
 			vector<map<int,double>> beta_return(people_n_); vector<vector<double>> x_flow_return(people_n_, vector<double>(edge_number_)); 
-			MinimizeLeadersEarning(q_tariff, big_M, alpha_pl_return, alpha_neg_return, beta_return, x_flow_return); //hyperparam TODO to-tune
+			double current_leader_earning = MinimizeLeadersEarning(q_tariff, big_M, alpha_pl_return, alpha_neg_return, beta_return, x_flow_return); //hyperparam TODO to-tune
 		
 		//Section 3.5.
 			try{
@@ -816,6 +807,13 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 			}
 			catch(INFEASIBLE) {
 				os << "The program has become Infeasible ending it here.\n"; 
+				break;
+			}
+			
+			//Is the current q_tariff an optimal solution?
+			if(leader_max_earn_ <= current_leader_earning + 0.001) { //TO-TUNE
+				os << "\n\n-----------------------Found the optimal solution in the iteration: " << i << " and the optimal value is: " << leader_max_earn_  << "    -------------------------" << endl << endl;
+				optimal_q_val = q_tariff;
 				break;
 			}
 
@@ -843,14 +841,25 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 			os << "Leader's current maximum profit: " << leader_max_earn_ << endl << endl;
 			os << "Every leader's profit we have encountered" << endl;
 			Print_vector(all_of_leaders_earnings, os);
-
+			
+			/*
 			if(static_cast<int>(all_of_leaders_earnings.size()) >= 3) {
 				break;
-			}
+			}*/
 			//PrintData();
 	}
-	os << "Final Values:\n";
-	PrintData();
+	os << "-------------------------------------------------ALL OF THE ITERATIONS HAS ENDED-----------------------------------------" << endl << endl << endl;
+	//Print out the encountered q_tariffs
+	os << "The encountered q_tariffs." << endl;
+	for(auto &v : all_of_q_tariffs) {
+		Print_vector(v, os);
+	}
+
+	//PrintData();
 }
+
+
+
+
 
 

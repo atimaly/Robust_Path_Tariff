@@ -70,6 +70,7 @@ class Paths : public Graph {
         vector<vector<double>> defining_polyhedra_u_; //After random problem generation it is filled with the necessary information to write out
 
         double leader_max_earn_;
+	vector<double> optimal_q_val;
 
         void SubsetPolyhedra();
 
@@ -89,9 +90,11 @@ class Paths : public Graph {
 
         bool SubstantiallyDifferentyUtility(double delta, int index_of_utility);
 
-        double MoveInUtilitySpace(const vector<vector<double>>& x_flow, int index_of_utility, NumMatrix &u_sol, std::ostream& os = std::cerr);
+        double MoveInUtilitySpace(const vector<vector<double>>& x_flow, int index_of_utility, vector<vector<double>> &u_sol, std::ostream& os = std::cerr);
 
 	void UtilityMovingIfDifferent(vector<vector<double>> &x_flow, std::ostream &os = std::cerr);
+
+	double DifferenceBetweenUtilityies(vector<vector<double>> &u_vals, int index_of_utility, std::ostream &os = std::cerr);
 
         //For Constructors
         void CreateRandomPeoplePaths(int people, int n);

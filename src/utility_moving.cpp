@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <algorithm>
 #include <cstdio>
 #include <ilconcert/iloenv.h>
 #include <ilconcert/iloexpression.h>
@@ -20,7 +21,7 @@
 using namespace lemon;
 using namespace std;
 
-double Paths::MoveInUtilitySpace(const vector<vector<double>> &x_flow, int index_of_utility, NumMatrix &u_sol, std::ostream &os) {
+double Paths::MoveInUtilitySpace(const vector<vector<double>> &x_flow, int index_of_utility, vector<vector<double>> &u_sol, std::ostream &os) {
 	//Moving in the utility space while keeping the x_flow the optimal answer
 	//IloArray<IloNumArray> new_utility(env, people_n_); //vector<double>(edge_number_, 0)
 	
@@ -181,7 +182,7 @@ double Paths::MoveInUtilitySpace(const vector<vector<double>> &x_flow, int index
 			obj_value = cplex.getObjValue();
 			os << "THE OPT SOL is " << obj_value << endl;
 			FOR(i,people_n_) {
-				u_sol[i] = IloNumArray(env, edge_number_);
+				u_sol[i] = vector<double>(edge_number_, 0);
 				FOR(e,edge_number_) {
 					try{
 						u_sol[i][e] = cplex.getValue(u_sub[i][e]);
@@ -258,19 +259,50 @@ bool Paths::SubstantiallyDifferentyUtility(double delta , int index_of_utility) 
 
 void Paths::UtilityMovingIfDifferent(vector<vector<double>> &x_flow, std::ostream &os) {
 	
-	vector<double> movement_delta(static_cast<int>(set_of_utilities_.size()));
-	NumMatrix3D u_vals(static_cast<int>(set_of_utilities_.size())-1);
-	FOR(si,static_cast<int>(set_of_utilities_.size())-1) {
-		u_vals[si] = NumMatrix(env, people_n_); //Save the utility value for later use
+	int current_utility_number = static_cast<int>(set_of_utilities_.size());
+
+	vector<double> movement_delta(current_utility_number); //Store the optimal deltas
+	vector<vector<vector<double>>> u_vals(current_utility_number-1, vector<vector<double>>(people_n_)); //Store the created new utilities
+	FOR(si,current_utility_number-1) {
+		//u_vals[si] = vector<vector<double>>(people_n_); //NumMatrix(env, people_n_); //Save the utility value for later use
 		movement_delta[si] = MoveInUtilitySpace(x_flow, si, u_vals[si]);
 		os << "The current delta for: " << si << " is " << movement_delta[si] << endl;
+		#if _DEBUG_EXTRA
+		os << "The new utility's value.";
+		Print_MatrixClear(u_vals[si]);
+		#endif
 	}
+
 	auto maxi_delta = std::max_element(movement_delta.begin(), movement_delta.end());
 	int indi_delta = std::distance(movement_delta.begin(), maxi_delta);
 	if(*maxi_delta == std::numeric_limits<double>::min()) {
 		set_of_utilities_.pop_back();
 		return;
 	}
+	#if _DEBUG_EXTRA
+	os << "Euclidean distance calculating." << endl;
+	#endif
+
+	vector<double> utility_euclid_distances(current_utility_number-1, 0.);
+	FOR(i,current_utility_number-1) {
+		if(movement_delta[i] != std::numeric_limits<double>::min()) //It can be solved
+		FOR(t,current_utility_number-1) {
+			#if _DEBUG_EXTRA
+			os << "Want to reach " << i << ", " << t << endl;
+			#endif
+			utility_euclid_distances[i] += DifferenceBetweenUtilityies(u_vals[i], t);
+		}
+	}
+
+	#if _DEBUG_EXTRA
+	os << "For the created utilities the current euclidean distances from set_of_utilities_ utilities\n";
+	Print_vector(utility_euclid_distances);
+	#endif
+	
+	auto most_different_util = std::max_element(utility_euclid_distances.begin(), utility_euclid_distances.end());
+	int indi_most_diff_util = std::distance(utility_euclid_distances.begin(), most_different_util);
+
+	
 	/*
 	NumMatrix nu_best(env, people_n_);
 	FOR(j,people_n_) {
@@ -289,9 +321,37 @@ void Paths::UtilityMovingIfDifferent(vector<vector<double>> &x_flow, std::ostrea
 	}*/
 
 	set_of_utilities_.pop_back();
-	set_of_utilities_.push_back(u_vals[indi_delta]);
+	NumMatrix best_new_utility(env, people_n_);
+	FOR(j,people_n_) {
+		best_new_utility[j] = IloNumArray(env, edge_number_);
+		FOR(e,edge_number_) {
+			best_new_utility[j][e] = u_vals[indi_most_diff_util][j][e]; //This is where we choose which utility we use
+		}
+	}
+	set_of_utilities_.push_back(best_new_utility);
 
 }
+
+double Paths::DifferenceBetweenUtilityies(vector<vector<double>> &u_vals, int index_of_utility, std::ostream &os) {
+	//This function calculates the euclidian distance between the u_vals utility and index_of_utility-th utility in set_of_utilities_
+	#if _DEBUG_EXTRA
+	os << "DifferenceBetweenUtilityies\n";
+	#endif
+	double euclid_diff{0};
+	FOR(j,people_n_) {
+		FOR(e,edge_number_) {
+			#if _DEBUG_EXTRA
+			os << "Distance at point " << j << ", " << e << endl;
+			os << "Value of u_vals[j][e] " << u_vals[j][e] << endl;
+			#endif
+
+			euclid_diff += std::abs(u_vals[j][e] - set_of_utilities_[index_of_utility][j][e]);
+		}
+	}
+
+	return euclid_diff;
+}
+
 
 bool HalvingUtilityMoving(vector<int> &index_to_be_vertices) {
 	//This program checks if the index_of_utility-th set_of_utilities_ and the last of set_of_utilities_ half is in U
