@@ -180,7 +180,9 @@ double Paths::MoveInUtilitySpace(const vector<vector<double>> &x_flow, int index
 
 		case IloAlgorithm::Optimal:
 			obj_value = cplex.getObjValue();
+			#if _DEBUG_EXTRA
 			os << "THE OPT SOL is " << obj_value << endl;
+			#endif
 			FOR(i,people_n_) {
 				u_sol[i] = vector<double>(edge_number_, 0);
 				FOR(e,edge_number_) {
@@ -393,7 +395,9 @@ double Paths::MoveInUtilitySpaceRandomDirection(const vector<vector<double>> &x_
 
 		case IloAlgorithm::Optimal:
 			obj_value = cplex.getObjValue();
+			#if _DEBUG_EXTRA
 			os << "THE OPT SOL is " << obj_value << endl;
+			#endif
 			FOR(i,people_n_) {
 				u_sol[i] = vector<double>(edge_number_, 0);
 				FOR(e,edge_number_) {
@@ -481,8 +485,8 @@ void Paths::UtilityMovingIfDifferent(vector<vector<double>> &x_flow, int random_
 	FOR(si,current_utility_number-1) {
 		//u_vals[si] = vector<vector<double>>(people_n_); //NumMatrix(env, people_n_); //Save the utility value for later use
 		movement_delta[si] = MoveInUtilitySpace(x_flow, si, u_vals[si]);
-		os << "The current delta for: " << si << " is " << movement_delta[si] << endl;
 		#if _DEBUG_EXTRA
+		os << "The current delta for: " << si << " is " << movement_delta[si] << endl;
 		os << "The new utility's value.";
 		Print_MatrixClear(u_vals[si]);
 		#endif
@@ -491,13 +495,13 @@ void Paths::UtilityMovingIfDifferent(vector<vector<double>> &x_flow, int random_
 	//Try Moving in Random Direction
 	RandomUnitVecGen uni_gen;
 	current_utility_number += random_dir_tries;
-	#if _DEBUG
+	#if _DEBUG_EXTRA
 	os << "current_utility_number: " << current_utility_number << endl;
 	#endif
 	for(int si = current_utility_number-random_dir_tries-1; si < current_utility_number-1; ++si) {
 		movement_delta[si] = MoveInUtilitySpaceRandomDirection(x_flow, uni_gen, u_vals[si]);
-		os << "The current delta for: " << si << " is " << movement_delta[si] << endl;
 		#if _DEBUG_EXTRA
+		os << "The current delta for: " << si << " is " << movement_delta[si] << endl;
 		os << "The new utility's value.";
 		Print_MatrixClear(u_vals[si]);
 		#endif
