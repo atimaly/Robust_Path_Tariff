@@ -9,7 +9,6 @@
 
 #include "robust_energy_cplex.h"
 
-
 using namespace std;
 using namespace lemon;
 
@@ -26,6 +25,7 @@ int main(int argc, char** argv) {
 		//fout.close();
 		Test.PrintData();
 		Test.FindingOptimalCost();
+		Test.PrintData();
 		cerr << "\n\nSaveGenerated: " << endl;
 
 		ofstream fout("generated_test.txt");
@@ -38,6 +38,6 @@ int main(int argc, char** argv) {
 		Paths Test(fin);
 		fin.close();
 		Test.FindingOptimalCost();
+		Test.PrintData();
 	}
-
 }

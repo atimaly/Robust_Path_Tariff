@@ -18,6 +18,8 @@
 #include <ilcplex/ilocplex.h>
 
 #include "robust_energy_cplex.h"
+#include "random_unit_vec.cpp"
+
 
 using namespace lemon;
 using namespace std;
@@ -779,7 +781,7 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 		InitialQValue(q_tariff);
 			
 	//double leader_max_earn_{-1};
-	int iteration{4};
+	int iteration{20};
 	set<double> all_of_leaders_earnings;
 	set<vector<double>> all_of_q_tariffs;
 	FOR(i,iteration) {
@@ -789,7 +791,7 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 		os << "------------------------------------------------------------------------------------\n\n";
 		#endif
 		//Petrubate q_tariff
-			PerturbationOfq(q_tariff, 0.01);
+			PerturbationOfq(q_tariff, 1e-5);
 
 		all_of_q_tariffs.insert(q_tariff); //To check if it changes
 
@@ -832,7 +834,7 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 			
 			//The new utility is not that different
 			if(how_different != static_cast<int>(set_of_utilities_.size())-1) {
-				UtilityMovingIfDifferent(x_flow_return);
+				UtilityMovingIfDifferent(x_flow_return, 50);
 			}
 
 			os << "\n\nCurrent set of utilities: " << endl;

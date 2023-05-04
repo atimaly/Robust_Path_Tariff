@@ -12,6 +12,8 @@
 #include <ilcplex/ilocplex.h>
 #include <vector>
 
+#include "../src/random_unit_vec.cpp"
+
 using namespace lemon;
 using namespace std;
 
@@ -91,8 +93,10 @@ class Paths : public Graph {
         bool SubstantiallyDifferentyUtility(double delta, int index_of_utility);
 
         double MoveInUtilitySpace(const vector<vector<double>>& x_flow, int index_of_utility, vector<vector<double>> &u_sol, std::ostream& os = std::cerr);
+	double MoveInUtilitySpaceRandomDirection(const vector<vector<double>>& x_flow, RandomUnitVecGen &uni_gen, vector<vector<double>> &u_sol, std::ostream& os = std::cerr);
 
-	void UtilityMovingIfDifferent(vector<vector<double>> &x_flow, std::ostream &os = std::cerr);
+
+	void UtilityMovingIfDifferent(vector<vector<double>> &x_flow, int random_dir_tries, std::ostream &os = std::cerr);
 
 	double DifferenceBetweenUtilityies(vector<vector<double>> &u_vals, int index_of_utility, std::ostream &os = std::cerr);
 
