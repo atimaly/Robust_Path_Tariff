@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include "robust_energy_cplex.h"
 #include <random>
 #include <lemon/list_graph.h>
 #include <lemon/time_measure.h>
@@ -7,9 +7,8 @@
 #include <lemon/concepts/path.h>
 #include <lemon/concepts/graph.h>
 
-#include "robust_energy_cplex.h"
 
-using namespace std;
+
 using namespace lemon;
 
 

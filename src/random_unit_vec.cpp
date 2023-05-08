@@ -1,4 +1,3 @@
-#include <bits/stdc++.h>
 #include <algorithm>
 #include <numeric>
 #include <random>

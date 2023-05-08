@@ -1,12 +1,9 @@
-#include <bits/stdc++.h>
+#include "robust_energy_cplex.h"
 #include <algorithm>
 #include <cstdio>
-#include <ilconcert/iloalg.h>
-#include <ilconcert/iloenv.h>
-#include <ilconcert/iloexpression.h>
-#include <iterator>
 #include <limits>
 #include <random>
+#include <set>
 #include <lemon/list_graph.h>
 #include <lemon/time_measure.h>
 #include <lemon/dijkstra.h>
@@ -15,15 +12,11 @@
 #include <lemon/concepts/graph.h>
  //#include <lemon/johnson.h>
 
-#include <ilcplex/ilocplex.h>
-
-#include "robust_energy_cplex.h"
 #include "random_unit_vec.cpp"
 
 
 using namespace lemon;
 using namespace std;
-
 
 void Paths::PerturbationOfq(vector<double> &q_tariff, const double delta, std::ostream &os) const{
 	#if _DEBUG
@@ -160,6 +153,8 @@ double Paths::MinimizeLeadersEarning(const vector<double> &q_tariff, const int b
 
 	IloNumVarArray alpha_plus(env, people_n_);
 	IloNumVarArray alpha_negative(env, people_n_);
+	IloNumVarArray helper_alpha(env, people_n_);
+	IloNumVarArray helper2_alpha(env, people_n_);
 	FOR(i,people_n_) {
 		sprintf(varname, "ap_%d", i);
 		alpha_plus[i] = IloNumVar(env, 0., +INFINITY, ILOFLOAT, varname);
@@ -175,10 +170,9 @@ double Paths::MinimizeLeadersEarning(const vector<double> &q_tariff, const int b
 			model.add(expr >= 1);
 
 			sprintf(varname, "hap_1_%d", i);
-			IloNumVar helper(env, 0, 1, ILOINT, varname);
-			model.add(alpha_plus[i] <= helper*big_M);
-			model.add(expr-1 <= (1-helper)*bound_flow_binary);
-			//helper.end();
+			helper_alpha[i] =IloNumVar(env, 0, 1, ILOINT, varname);
+			model.add(alpha_plus[i] <= helper_alpha[i] *big_M);
+			model.add(expr-1 <= (1- helper_alpha[i])*bound_flow_binary);
 			expr.end();
 			
 
@@ -193,9 +187,9 @@ double Paths::MinimizeLeadersEarning(const vector<double> &q_tariff, const int b
 			model.add(expr_2+1 >= 0);
 			
 			sprintf(varname, "han_2_%d", i);
-			IloNumVar helper_2(env, 0, 1, ILOINT, varname);
-			model.add(alpha_negative[i] <= helper_2*big_M);
-			model.add(expr_2+1 <= (1-helper_2)*bound_flow_binary);
+			helper2_alpha[i] = IloNumVar(env, 0, 1, ILOINT, varname);
+			model.add(alpha_negative[i] <= helper2_alpha[i] *big_M);
+			model.add(expr_2+1 <= (1- helper2_alpha[i])*bound_flow_binary);
 			expr_2.end();
 			
 
@@ -424,10 +418,33 @@ double Paths::MinimizeLeadersEarning(const vector<double> &q_tariff, const int b
 
 	expr_obj.end();
 	cplex.end();
+
+	FOR(i, people_n_)
+	{
+		FOR(j, edge_number_) {
+			x[i][j].end();
+		}
+		x[i].end();
+	}
 	x.end();
+
+	FOR(i, people_n_) {
+		alpha_plus[i].end();
+		alpha_negative[i].end();
+	}
 	alpha_plus.end();
 	alpha_negative.end();
+	FOR(j, people_n_) {
+		for(auto m : beta[j])
+			m.second.end();
+	}
 	beta.end();
+	FOR(i, people_n_) {
+		helper_alpha[i].end();
+		helper2_alpha[i].end();
+	}
+	helper_alpha.end();
+	helper2_alpha.end();
 	model.end();
 
 	#if _DEBUG
@@ -781,7 +798,7 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 		InitialQValue(q_tariff);
 			
 	//double leader_max_earn_{-1};
-	int iteration{20};
+	int iteration{50};
 	set<double> all_of_leaders_earnings;
 	set<vector<double>> all_of_q_tariffs;
 	FOR(i,iteration) {
@@ -859,9 +876,3 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 
 	//PrintData();
 }
-
-
-
-
-
-

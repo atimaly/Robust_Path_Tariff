@@ -1,5 +1,6 @@
-#include <bits/stdc++.h>
-#include <ilconcert/iloenv.h>
+#include <ilcplex/ilocplex.h>
+ILOSTLBEGIN
+
 #include <lemon/adaptors.h>
 #include <lemon/concepts/graph.h>
 #include <lemon/concepts/path.h>
@@ -8,14 +9,12 @@
 #include <lemon/time_measure.h>
 #include <limits>
 #include <random>
-
-#include <ilcplex/ilocplex.h>
 #include <vector>
 
 #include "../src/random_unit_vec.cpp"
 
 using namespace lemon;
-using namespace std;
+
 
 #ifndef ROBUST_PATH
 #define ROBUST_PATH
