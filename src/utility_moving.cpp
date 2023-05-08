@@ -1,8 +1,9 @@
-#include <bits/stdc++.h>
+#include "robust_energy_cplex.h"
+
 #include <algorithm>
 #include <cstdio>
-#include <ilconcert/iloenv.h>
-#include <ilconcert/iloexpression.h>
+//#include <ilconcert/iloenv.h>
+//#include <ilconcert/iloexpression.h>
 #include <limits>
 #include <ostream>
 #include <random>
@@ -13,13 +14,8 @@
 #include <lemon/concepts/path.h>
 #include <lemon/concepts/graph.h>
 
-#include <ilcplex/ilocplex.h>
-
-
-#include "robust_energy_cplex.h"
 
 using namespace lemon;
-using namespace std;
 
 double Paths::MoveInUtilitySpace(const vector<vector<double>> &x_flow, int index_of_utility, vector<vector<double>> &u_sol, std::ostream &os) {
 	//Moving in the utility space while keeping the x_flow the optimal answer
@@ -234,6 +230,7 @@ double Paths::MoveInUtilitySpace(const vector<vector<double>> &x_flow, int index
 	u_sub.end();
 	Delta.end();
 	model.end();
+	cplex.end();
 	return obj_value;
 }
 
@@ -449,6 +446,7 @@ double Paths::MoveInUtilitySpaceRandomDirection(const vector<vector<double>> &x_
 	u_sub.end();
 	Delta.end();
 	model.end();
+	cplex.end();
 	return obj_value;
 }
 
@@ -578,6 +576,6 @@ double Paths::DifferenceBetweenUtilityies(vector<vector<double>> &u_vals, int in
 bool HalvingUtilityMoving(vector<int> &index_to_be_vertices) {
 	//This program checks if the index_of_utility-th set_of_utilities_ and the last of set_of_utilities_ half is in U
 	
-
+	return 0;
 }
 
