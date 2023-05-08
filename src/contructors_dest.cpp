@@ -1,7 +1,7 @@
-#include <bits/stdc++.h>
+#include "robust_energy_cplex.h"
 #include <cstdio>
-#include <ilconcert/iloenv.h>
-#include <ilconcert/iloexpression.h>
+//#include <ilconcert/iloenv.h>
+//#include <ilconcert/iloexpression.h>
 #include <limits>
 #include <random>
 #include <lemon/list_graph.h>
@@ -10,15 +10,12 @@
 #include <lemon/adaptors.h>
 #include <lemon/concepts/path.h>
 #include <lemon/concepts/graph.h>
-
-#include <ilcplex/ilocplex.h>
 #include <utility>
 
 
-#include "robust_energy_cplex.h"
+
 
 using namespace lemon;
-using namespace std;
 
 Graph::Graph(int n, double erdos_p) : n_{n},  edge_number_{0}, erdos_edge_possible_{erdos_p} {
 	vector<ListDigraph::Node> nodes;
