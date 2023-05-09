@@ -200,6 +200,8 @@ double Paths::MinimizeLeadersEarning(const vector<double> &q_tariff, const int b
     #endif
 	
 	vector<map<int,IloNumVar>> beta(people_n_);
+	vector<map<int,IloNumVar>> beta_helpers(people_n_);
+
 	FOR(j,people_n_) {
 		FOR(v,n_) {
 			ListDigraph::Node curr_v = g.nodeFromId(v);
@@ -224,9 +226,9 @@ double Paths::MinimizeLeadersEarning(const vector<double> &q_tariff, const int b
 					model.add(expr >= 0);
 
 					sprintf(varname, "hb_%d%d", j, v);
-					IloNumVar helper(env, 0, 1, ILOINT, varname);
-					model.add(beta[j][v] <= helper*big_M);
-					model.add(expr <= (1-helper)*bound_flow_binary);
+					beta_helpers[j][v] =  IloNumVar(env, 0, 1, ILOINT, varname);
+					model.add(beta[j][v] <= beta_helpers[j][v]*big_M);
+					model.add(expr <= (1-beta_helpers[j][v])*bound_flow_binary);
 					//helper.end();
 				}
 				
@@ -239,8 +241,10 @@ double Paths::MinimizeLeadersEarning(const vector<double> &q_tariff, const int b
 	#if _DEBUG_EXTRA
     cerr << "-------BETA DEFINED-------" << endl;
     #endif
-
+	
+    	vector<vector<IloNumVar>> duality_helpers(people_n_);
 	FOR(j,people_n_) {
+		duality_helpers[j].resize(edge_number_);
 		FOR(e,edge_number_) {
 			IloExpr expr(env);
 			int source = g.id(g.source(g.arcFromId(e))); int target = g.id(g.target(g.arcFromId(e)));
@@ -257,9 +261,9 @@ double Paths::MinimizeLeadersEarning(const vector<double> &q_tariff, const int b
 			model.add(expr <= 0);
 
 			sprintf(varname, "hdu_%d_%d", j, e);
-			IloNumVar helper(env, 0, 1, ILOINT, varname);
-			model.add(x[j][e] <= helper*bound_flow_binary);
-			model.add(-expr <= (1-helper)*big_M);
+			duality_helpers[j][e] = IloNumVar(env, 0, 1, ILOINT, varname);
+			model.add(x[j][e] <= duality_helpers[j][e]*bound_flow_binary);
+			model.add(-expr <= (1-duality_helpers[j][e])*big_M);
 			expr.end();
 		}
 	}
@@ -439,6 +443,18 @@ double Paths::MinimizeLeadersEarning(const vector<double> &q_tariff, const int b
 			m.second.end();
 	}
 	beta.end();
+	FOR(j, people_n_) {
+		for(auto m: beta_helpers[j])
+			m.second.end();
+	}
+	beta_helpers.end();
+
+	FOR(j, people_n_) {
+		FOR(e, edge_number_) {
+			duality_helpers[j][e].end();
+		}
+	}
+
 	FOR(i, people_n_) {
 		helper_alpha[i].end();
 		helper2_alpha[i].end();
@@ -779,9 +795,35 @@ double Paths::FindingTariffWithFiniteUtilities(vector<double> &q_tariff, const i
 	Z.end();
 	//expr_obj.end();
 	cplex.end();
+	FOR(k,utility_quantity) {
+		FOR(i,people_n_) {
+			FOR(j,edge_number_) {
+				x[k][i][j].end();
+			}
+			x[k][i].end();
+		}
+		x[k].end();
+	}
 	x.end();
+	FOR(k,utility_quantity) {
+		FOR(i,people_n_) {
+			alpha_plus[k][i].end();
+			alpha_negative[k][i].end();
+		}
+		alpha_plus[k].end();
+		alpha_negative[k].end();
+	}
 	alpha_plus.end();
 	alpha_negative.end();
+	FOR(k,utility_quantity) {
+		FOR(j,people_n_) {
+			for(auto m: beta[k][j]) {
+				m.second.end();
+			}
+			beta[k][j].end();
+		}
+		beta[k].end();
+	}
 	beta.end();
 	model.end();
 
@@ -851,7 +893,7 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 			
 			//The new utility is not that different
 			if(how_different != static_cast<int>(set_of_utilities_.size())-1) {
-				UtilityMovingIfDifferent(x_flow_return, 50);
+				UtilityMovingIfDifferent(x_flow_return, 100);
 			}
 
 			os << "\n\nCurrent set of utilities: " << endl;

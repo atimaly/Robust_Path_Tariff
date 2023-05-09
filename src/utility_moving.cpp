@@ -119,6 +119,7 @@ double Paths::MoveInUtilitySpace(const vector<vector<double>> &x_flow, int index
 	}
 
 	vector<map<int,IloNumVar>> beta(people_n_);
+	//vector<map<int,IloNumVar>> beta_helpers(people_n_);
 	FOR(j,people_n_) {
 		FOR(v,n_) {
 			ListDigraph::Node curr_v = g.nodeFromId(v);
@@ -171,7 +172,8 @@ double Paths::MoveInUtilitySpace(const vector<vector<double>> &x_flow, int index
 
 	cplex.solve();
 	double obj_value{0};
-	switch (cplex.getStatus())
+	auto stat_solv = cplex.getStatus();
+	switch (stat_solv)
 	{
 
 		case IloAlgorithm::Optimal:
@@ -183,7 +185,7 @@ double Paths::MoveInUtilitySpace(const vector<vector<double>> &x_flow, int index
 				u_sol[i] = vector<double>(edge_number_, 0);
 				FOR(e,edge_number_) {
 					try{
-						u_sol[i][e] = cplex.getValue(u_sub[i][e]);
+						u_sol[i][e] = static_cast<double>(cplex.getValue(u_sub[i][e]));
 					}
 					catch(IloAlgorithm::NotExtractedException) {
 						//cerr << "Didn' t get the vertex " << i << endl;
@@ -194,11 +196,11 @@ double Paths::MoveInUtilitySpace(const vector<vector<double>> &x_flow, int index
 			}
 			break;
 		case IloAlgorithm::Unbounded:
-			os << "THE PROBLEM IS UNBOUNDED:\n";return std::numeric_limits<double>::min();
+			os << "THE PROBLEM IS UNBOUNDED:\n";
 
 			break;
 		case IloAlgorithm::Infeasible:
-			os << "THE PROBLEM IS Infeasible:\n";return std::numeric_limits<double>::min();
+			os << "THE PROBLEM IS Infeasible:\n";
 
 			break;
 		
@@ -207,13 +209,11 @@ double Paths::MoveInUtilitySpace(const vector<vector<double>> &x_flow, int index
 			break;
 
 		case IloAlgorithm::Feasible:
-			os << "THE PROBLEM is FEASIBLE:\n";return std::numeric_limits<double>::min();
-
+			os << "THE PROBLEM is FEASIBLE:\n";
 			break;
 		
 		case IloAlgorithm::InfeasibleOrUnbounded:
 			os << "THE PROBLEM is InFEASIBLE or Unbounded:\n";
-			return std::numeric_limits<double>::min();
 			break;
 		
 		case IloAlgorithm::Unknown:
@@ -223,14 +223,30 @@ double Paths::MoveInUtilitySpace(const vector<vector<double>> &x_flow, int index
 			os << "Something has happened.\n";
 			break;
 	}
+	
 
+	FOR(j, people_n_) {
+		for(auto m : beta[j])
+			m.second.end();
+	}
 	beta.end();
-	alpha_negative.end();
+	
+	FOR(i, people_n_) {
+		alpha_plus[i].end();
+		alpha_negative[i].end();
+	}
 	alpha_plus.end();
-	u_sub.end();
+	alpha_negative.end();
 	Delta.end();
+	FOR(j,people_n_) {
+		FOR(e,edge_number_) {
+			u_sub[j][e].end();
+		}
+	}
+	u_sub.end();
 	model.end();
 	cplex.end();
+	if(stat_solv != IloAlgorithm::Optimal) return std::numeric_limits<double>::min();
 	return obj_value;
 }
 
@@ -387,7 +403,8 @@ double Paths::MoveInUtilitySpaceRandomDirection(const vector<vector<double>> &x_
 
 	cplex.solve();
 	double obj_value{0};
-	switch (cplex.getStatus())
+	auto stat_solv = cplex.getStatus();
+	switch (stat_solv)
 	{
 
 		case IloAlgorithm::Optimal:
@@ -399,7 +416,7 @@ double Paths::MoveInUtilitySpaceRandomDirection(const vector<vector<double>> &x_
 				u_sol[i] = vector<double>(edge_number_, 0);
 				FOR(e,edge_number_) {
 					try{
-						u_sol[i][e] = cplex.getValue(u_sub[i][e]);
+						u_sol[i][e] = static_cast<double>(cplex.getValue(u_sub[i][e]));
 					}
 					catch(IloAlgorithm::NotExtractedException) {
 						//cerr << "Didn' t get the vertex " << i << endl;
@@ -410,12 +427,10 @@ double Paths::MoveInUtilitySpaceRandomDirection(const vector<vector<double>> &x_
 			}
 			break;
 		case IloAlgorithm::Unbounded:
-			os << "THE PROBLEM IS UNBOUNDED:\n";return std::numeric_limits<double>::min();
-
+			os << "THE PROBLEM IS UNBOUNDED:\n";
 			break;
 		case IloAlgorithm::Infeasible:
-			os << "THE PROBLEM IS Infeasible:\n";return std::numeric_limits<double>::min();
-
+			os << "THE PROBLEM IS Infeasible:\n";
 			break;
 		
 		case IloAlgorithm::Error:
@@ -423,13 +438,11 @@ double Paths::MoveInUtilitySpaceRandomDirection(const vector<vector<double>> &x_
 			break;
 
 		case IloAlgorithm::Feasible:
-			os << "THE PROBLEM is FEASIBLE:\n";return std::numeric_limits<double>::min();
-
+			os << "THE PROBLEM is FEASIBLE:\n";
 			break;
 		
 		case IloAlgorithm::InfeasibleOrUnbounded:
 			os << "THE PROBLEM is InFEASIBLE or Unbounded:\n";
-			return std::numeric_limits<double>::min();
 			break;
 		
 		case IloAlgorithm::Unknown:
@@ -439,14 +452,31 @@ double Paths::MoveInUtilitySpaceRandomDirection(const vector<vector<double>> &x_
 			os << "Something has happened.\n";
 			break;
 	}
+	
 
+	FOR(j, people_n_) {
+		for(auto m : beta[j])
+			m.second.end();
+	}
 	beta.end();
-	alpha_negative.end();
+	
+	FOR(i, people_n_) {
+		alpha_plus[i].end();
+		alpha_negative[i].end();
+	}
 	alpha_plus.end();
-	u_sub.end();
+	alpha_negative.end();
 	Delta.end();
+	FOR(j,people_n_) {
+		FOR(e,edge_number_) {
+			u_sub[j][e].end();
+		}
+	}
+	u_sub.end();
 	model.end();
 	cplex.end();
+	if(stat_solv != IloAlgorithm::Optimal) return std::numeric_limits<double>::min();
+	
 	return obj_value;
 }
 
@@ -482,6 +512,9 @@ void Paths::UtilityMovingIfDifferent(vector<vector<double>> &x_flow, int random_
 	//Try Moving in given direction
 	FOR(si,current_utility_number-1) {
 		//u_vals[si] = vector<vector<double>>(people_n_); //NumMatrix(env, people_n_); //Save the utility value for later use
+		#if _DEBUG
+		os << "Utility move calc: " << si << endl;
+		#endif
 		movement_delta[si] = MoveInUtilitySpace(x_flow, si, u_vals[si]);
 		#if _DEBUG_EXTRA
 		os << "The current delta for: " << si << " is " << movement_delta[si] << endl;
@@ -520,13 +553,16 @@ void Paths::UtilityMovingIfDifferent(vector<vector<double>> &x_flow, int random_
 
 	//Euclid dist between the new utilities
 	vector<double> utility_euclid_distances(current_utility_number-1, 0.);
+	vector<double> utility_euclid_min_distances(current_utility_number-1, std::numeric_limits<double>::max());
 	FOR(i,current_utility_number-1) {
 		if(movement_delta[i] != std::numeric_limits<double>::min()) //It can be solved
 		FOR(t,current_utility_number-random_dir_tries-1) {
 			#if _DEBUG_EXTRA
 			os << "Want to reach " << i << ", " << t << endl;
 			#endif
-			utility_euclid_distances[i] += DifferenceBetweenUtilityies(u_vals[i], t);
+			double temp_dist = DifferenceBetweenUtilityies(u_vals[i], t);
+			utility_euclid_distances[i] += temp_dist;
+			utility_euclid_min_distances[i] = std::min(utility_euclid_min_distances[i], temp_dist);
 		}
 	}
 
@@ -537,10 +573,11 @@ void Paths::UtilityMovingIfDifferent(vector<vector<double>> &x_flow, int random_
 	
 	auto most_different_util = std::max_element(utility_euclid_distances.begin(), utility_euclid_distances.end());
 	int indi_most_diff_util = std::distance(utility_euclid_distances.begin(), most_different_util);
-
-	
+	//auto min_different_util = std::min_element(utility_euclid_distances.begin(), utility_euclid_distances.end());
 	
 	set_of_utilities_.pop_back();
+	if(utility_euclid_min_distances[indi_most_diff_util] <= 0.01) return; //If the new utility is too close to a previous one then find a new one
+
 	NumMatrix best_new_utility(env, people_n_);
 	FOR(j,people_n_) {
 		best_new_utility[j] = IloNumArray(env, edge_number_);
