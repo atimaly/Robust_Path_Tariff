@@ -251,7 +251,7 @@ double Paths::MoveInUtilitySpace(const vector<vector<double>> &x_flow, int index
 }
 
 
-double Paths::MoveInUtilitySpaceRandomDirection(const vector<vector<double>> &x_flow, RandomUnitVecGen &uni_gen, vector<vector<double>> &u_sol, std::ostream &os) {
+double Paths::MoveInUtilitySpaceRandomDirection(const vector<vector<double>> &x_flow, RandomUnitVecGen &uni_gen, vector<vector<double>> &u_sol, int which_dir, std::ostream &os) {
 	//Moving in the utility space while keeping the x_flow the optimal answer
 	
 	IloModel model(env);
@@ -297,9 +297,17 @@ double Paths::MoveInUtilitySpaceRandomDirection(const vector<vector<double>> &x_
 		
 	//defining \nu
 		NumMatrix nu(env, people_n_);//set_of_utilities_[static_cast<int>(set_of_utilities_.size())-1];
-		vector<double> random_dir = uni_gen.GenerateDUnitVec(edge_number_);
+				/*
+		if(which_dir == 0) random_dir = uni_gen.GenerateDUnitVec(edge_number_);
+		if(which_dir == 1) random_dir = uni_gen.GenerateDUnitVecPositive(edge_number_);
+		if(which_dir == 2) random_dir = uni_gen.GenerateDUnitVecNegative(edge_number_);*/
+
 		FOR(j,people_n_) {
 			nu[j] = IloNumArray(env, edge_number_);
+			vector<double> random_dir; // =  uni_gen.GenerateDUnitVec(edge_number_);
+			if(which_dir == 0) random_dir = uni_gen.GenerateDUnitVec(edge_number_);
+			if(which_dir == 1) random_dir = uni_gen.GenerateDUnitVecPositive(edge_number_);
+			if(which_dir == 2) random_dir = uni_gen.GenerateDUnitVecNegative(edge_number_);
 			FOR(e,edge_number_) {
 				nu[j][e] = static_cast<float>(random_dir[e]);
 			}
@@ -505,7 +513,7 @@ bool Paths::SubstantiallyDifferentyUtility(double delta , int index_of_utility) 
 void Paths::UtilityMovingIfDifferent(vector<vector<double>> &x_flow, int random_dir_tries, std::ostream &os) {
 	
 	int current_utility_number = static_cast<int>(set_of_utilities_.size());
-
+	//random_dir_tries *= 3; //Because we try to move in positive, negative normal direction
 	vector<double> movement_delta(current_utility_number+random_dir_tries); //Store the optimal deltas
 	vector<vector<vector<double>>> u_vals(current_utility_number+random_dir_tries-1, vector<vector<double>>(people_n_)); //Store the created new utilities
 
@@ -523,14 +531,17 @@ void Paths::UtilityMovingIfDifferent(vector<vector<double>> &x_flow, int random_
 		#endif
 	}
 
-	//Try Moving in Random Direction
+	//Try Moving in Random Unit vector Direction 
+	//Try moving in Random positive unit vector direction
+	//Try moving in random negative unit vector direction
 	RandomUnitVecGen uni_gen;
 	current_utility_number += random_dir_tries;
 	#if _DEBUG_EXTRA
 	os << "current_utility_number: " << current_utility_number << endl;
 	#endif
+	std::discrete_distribution<> d({1, 1, 1});
 	for(int si = current_utility_number-random_dir_tries-1; si < current_utility_number-1; ++si) {
-		movement_delta[si] = MoveInUtilitySpaceRandomDirection(x_flow, uni_gen, u_vals[si]);
+		movement_delta[si] = MoveInUtilitySpaceRandomDirection(x_flow, uni_gen, u_vals[si], static_cast<int>(d(gen))); //, static_cast<int>(d(gen)));
 		#if _DEBUG_EXTRA
 		os << "The current delta for: " << si << " is " << movement_delta[si] << endl;
 		os << "The new utility's value.";

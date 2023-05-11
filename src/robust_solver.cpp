@@ -4,6 +4,8 @@
 #include <limits>
 #include <random>
 #include <set>
+#include <ilconcert/iloexpression.h>
+#include <ilconcert/ilosys.h>
 #include <lemon/list_graph.h>
 #include <lemon/time_measure.h>
 #include <lemon/dijkstra.h>
@@ -510,10 +512,14 @@ double Paths::FindingTariffWithFiniteUtilities(vector<double> &q_tariff, const i
 
 	NumVarMatrix alpha_plus(env, utility_quantity);
 	NumVarMatrix alpha_negative(env, utility_quantity);
+
+	vector<vector<IloNumVar>> alpha_helper(utility_quantity);
+	vector<vector<IloNumVar>> alpha_helper_2(utility_quantity);
 	FOR(k,utility_quantity) {
 		alpha_plus[k] = IloNumVarArray(env, people_n_);
 		alpha_negative[k] = IloNumVarArray(env, people_n_);
-
+		
+		alpha_helper[k].resize(people_n_); alpha_helper_2[k].resize(people_n_);
 		FOR(i,people_n_) {
 			sprintf(varname, "ap_%d_%d", k, i);
 			alpha_plus[k][i] = IloNumVar(env, 0., +INFINITY, ILOFLOAT, varname);
@@ -529,9 +535,9 @@ double Paths::FindingTariffWithFiniteUtilities(vector<double> &q_tariff, const i
 				model.add(expr >= 1);
 
 				sprintf(varname, "hap_1_%d_%d", k, i);
-				IloNumVar helper(env, 0, 1, ILOINT, varname);
-				model.add(alpha_plus[k][i] <= helper*big_M);
-				model.add(expr-1 <= (1-helper)*bound_flow_binary);
+				alpha_helper[k][i] = IloNumVar(env, 0, 1, ILOINT, varname);
+				model.add(alpha_plus[k][i] <= alpha_helper[k][i]*big_M);
+				model.add(expr-1 <= (1-alpha_helper[k][i])*bound_flow_binary);
 				//helper.end();
 				expr.end();
 				
@@ -547,9 +553,9 @@ double Paths::FindingTariffWithFiniteUtilities(vector<double> &q_tariff, const i
 				model.add(expr_2+1 >= 0);
 				
 				sprintf(varname, "han_2_%d_%d", k, i);
-				IloNumVar helper_2(env, 0, 1, ILOINT, varname);
-				model.add(alpha_negative[k][i] <= helper_2*big_M);
-				model.add(expr_2+1 <= (1-helper_2)*bound_flow_binary);
+				alpha_helper_2[k][i] = IloNumVar(env, 0, 1, ILOINT, varname);
+				model.add(alpha_negative[k][i] <= alpha_helper_2[k][i]*big_M);
+				model.add(expr_2+1 <= (1-alpha_helper_2[k][i])*bound_flow_binary);
 				expr_2.end();
 				
 
@@ -561,6 +567,7 @@ double Paths::FindingTariffWithFiniteUtilities(vector<double> &q_tariff, const i
     #endif
 	
 	vector<vector<map<int,IloNumVar>>> beta(utility_quantity, vector<map<int,IloNumVar>>(people_n_));
+	vector<vector<map<int, IloNumVar>>> beta_helpers(utility_quantity, vector<map<int, IloNumVar>>(people_n_));
 	FOR(k,utility_quantity) {
 		FOR(j,people_n_) {
 			FOR(v,n_) {
@@ -583,9 +590,9 @@ double Paths::FindingTariffWithFiniteUtilities(vector<double> &q_tariff, const i
 						model.add(expr >= 0);
 
 						sprintf(varname, "hb_%d_%d_%d", k, j, v);
-						IloNumVar helper(env, 0, 1, ILOINT, varname);
-						model.add(beta[k][j][v] <= helper*big_M);
-						model.add(expr <= (1-helper)*bound_flow_binary);
+						beta_helpers[k][j][v] = IloNumVar(env, 0, 1, ILOINT, varname);
+						model.add(beta[k][j][v] <= beta_helpers[k][j][v]*big_M);
+						model.add(expr <= (1-beta_helpers[k][j][v])*bound_flow_binary);
 						//helper.end();
 					}
 					
@@ -598,8 +605,12 @@ double Paths::FindingTariffWithFiniteUtilities(vector<double> &q_tariff, const i
 	#if _DEBUG_EXTRA
     cerr << "-------BETA DEFINED-------" << endl;
     #endif
+
+    	vector<vector<vector<IloNumVar>>> duality_helpers(utility_quantity);
 	FOR(k,utility_quantity) {
+		duality_helpers[k].resize(people_n_);
 		FOR(j,people_n_) {
+			duality_helpers[k][j].resize(edge_number_);
 			FOR(e,edge_number_) {
 				IloExpr expr(env);
 				int source = g.id(g.source(g.arcFromId(e))); int target = g.id(g.target(g.arcFromId(e)));
@@ -619,9 +630,9 @@ double Paths::FindingTariffWithFiniteUtilities(vector<double> &q_tariff, const i
 				model.add(expr <= 0);
 
 				sprintf(varname, "hdu_%d_%d_%d", k, j, e);
-				IloNumVar helper(env, 0, 1, ILOINT, varname);
-				model.add(x[k][j][e] <= helper*bound_flow_binary);
-				model.add(-expr <= (1-helper)*big_M);
+				duality_helpers[k][j][e] = IloNumVar(env, 0, 1, ILOINT, varname);
+				model.add(x[k][j][e] <= duality_helpers[k][j][e]*bound_flow_binary);
+				model.add(-expr <= (1-duality_helpers[k][j][e])*big_M);
 				expr.end();
 			}
 		}
@@ -809,6 +820,8 @@ double Paths::FindingTariffWithFiniteUtilities(vector<double> &q_tariff, const i
 		FOR(i,people_n_) {
 			alpha_plus[k][i].end();
 			alpha_negative[k][i].end();
+
+			alpha_helper[k][i].end(); alpha_helper_2[k][i].end();
 		}
 		alpha_plus[k].end();
 		alpha_negative[k].end();
@@ -821,10 +834,23 @@ double Paths::FindingTariffWithFiniteUtilities(vector<double> &q_tariff, const i
 				m.second.end();
 			}
 			beta[k][j].end();
+			for(auto m: beta_helpers[k][j]) {
+				m.second.end();
+			}
+			beta_helpers[k][j].end();
 		}
 		beta[k].end();
+		beta_helpers[k].end();
 	}
 	beta.end();
+
+	FOR(k,utility_quantity) {
+		FOR(j,people_n_) {
+			FOR(e,edge_number_) {
+				duality_helpers[k][j][e].end();
+			}
+		}
+	}
 	model.end();
 
 	#if _DEBUG
@@ -850,7 +876,9 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 		os << "------------------------------------------------------------------------------------\n\n";
 		#endif
 		//Petrubate q_tariff
-			PerturbationOfq(q_tariff, 1e-5);
+		std::discrete_distribution<> turbe({1,1});
+			if(turbe(gen))
+				PerturbationOfq(q_tariff, 1e-5);
 
 		all_of_q_tariffs.insert(q_tariff); //To check if it changes
 
@@ -893,7 +921,7 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 			
 			//The new utility is not that different
 			if(how_different != static_cast<int>(set_of_utilities_.size())-1) {
-				UtilityMovingIfDifferent(x_flow_return, 100);
+				UtilityMovingIfDifferent(x_flow_return, 50);
 			}
 
 			os << "\n\nCurrent set of utilities: " << endl;

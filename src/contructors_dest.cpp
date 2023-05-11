@@ -70,7 +70,7 @@ Paths::Paths(const int people, const int n, double erdos_p, PolyCreator prices_m
 
 	CreateRandomPeoplePaths(people, n);
 		
-	std::uniform_int_distribution<>uni_d(1,3); //TO-TUNE uniform
+	std::uniform_int_distribution<>uni_d(0,1); //TO-TUNE uniform
 	FOR(i,edge_number_) {
 		arc_buy_p_[g.arcFromId(i)] = uni_d(gen);
 	}

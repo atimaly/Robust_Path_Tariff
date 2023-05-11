@@ -22,6 +22,22 @@ class RandomUnitVecGen {
 		std::for_each(unit_v.begin(), unit_v.end(), [normi](double &c){c /= normi;}); //Norming to 1
 		return unit_v;
 	} 
+
+	vector<double> GenerateDUnitVecPositive(int dim) {
+		vector<double> unit_v(dim);
+		std::generate(unit_v.begin(), unit_v.end(), [&](){return std::abs(d(gen));}); //Filling it up
+		double normi = sqrt(std::inner_product(unit_v.begin(), unit_v.end(), unit_v.begin(), 0.0L)); //The norm of the vector
+		std::for_each(unit_v.begin(), unit_v.end(), [normi](double &c){c /= normi;}); //Norming to 1
+		return unit_v;
+	}
+
+	vector<double> GenerateDUnitVecNegative(int dim) {
+		vector<double> unit_v(dim);
+		std::generate(unit_v.begin(), unit_v.end(), [&](){return -std::abs(d(gen));}); //Filling it up
+		double normi = sqrt(std::inner_product(unit_v.begin(), unit_v.end(), unit_v.begin(), 0.0L)); //The norm of the vector
+		std::for_each(unit_v.begin(), unit_v.end(), [normi](double &c){c /= normi;}); //Norming to 1
+		return unit_v;
+	}
 	
 };
 #endif //RANDOM_UNIT_VEC_GEN
