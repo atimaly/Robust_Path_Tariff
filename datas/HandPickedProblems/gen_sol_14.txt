@@ -1,0 +1,152 @@
+
+
+-----------------PRINTDATA----------------
+The number of vertices: 10
+The number of arcs: 7
+The Arcs: 
+	(9, 7) the vendor is buying it originally at price: 1
+	(7, 8) the vendor is buying it originally at price: 1
+	(6, 9) the vendor is buying it originally at price: 0
+	(3, 2) the vendor is buying it originally at price: 0
+	(2, 5) the vendor is buying it originally at price: 0
+	(0, 4) the vendor is buying it originally at price: 1
+	(0, 3) the vendor is buying it originally at price: 1
+Number of people travelling: 2
+Their starting and end points: 
+(6 , 9 ) (9 , 7 ) 
+The defining polyhedra for q:
+IloModel model0 = {
+q_1  + q_2  + q_6  <= 3.90598 
+q_0  + q_1  <= 3.52186 
+q_1  + q_4  <= 5.56417 
+q_2  + q_4  <= 5.23877 
+}
+
+The defining polyhedra for u:
+IloModel model1 = {
+u_03  + u_04  <= 6.0781 
+u_01  + u_02  <= 5.78207 
+u_05  + u_06  <= 3.92722 
+u_03  + u_04  <= 5.03798 
+u_13  + u_15  <= 6.5074 
+u_10  + u_16  <= 5.14556 
+u_10  + u_13  + u_14  + u_15  <= 5.87181 
+u_11  + u_13  + u_14  <= 5.09022 
+}
+
+Current set of utilities: 
+
+Leader's current maximum profit: 1.79769e+308
+-----------------PRINTDATA----------------
+
+
+-------InitialQValue BEGIN-------
+The solution is for a sample q value:
+[3, 0, 1, 0, 1, 2, 1]
+
+
+-------InitialQValue END-------
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 0 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 0, 0, 1, 0, 0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 1]
+Alpha Plus values are :
+[1, 1]
+Alpha Negativa values are :
+[0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+The objective value is : 1
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 0, 1, 0, 0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 1]
+The solution for q is:
+[0, 0, 0, 0, 1, 2, 1]
+Alpha Plus values are :
+[1, 1]
+Alpha Negativa values are :
+[0, 0]
+Maximum objective value is: 1
+
+-------FindingTariffWithFiniteUtilities END-------
+
+
+-----------------------Found the optimal solution in the iteration: 0 and the optimal value is: 1    -------------------------
+
+-------------------------------------------------ALL OF THE ITERATIONS HAS ENDED-----------------------------------------
+
+
+The encountered q_tariffs.
+3 0 1 0 1 2 1 
+
+
+-----------------PRINTDATA----------------
+The number of vertices: 10
+The number of arcs: 7
+The Arcs: 
+	(9, 7) the vendor is buying it originally at price: 1
+	(7, 8) the vendor is buying it originally at price: 1
+	(6, 9) the vendor is buying it originally at price: 0
+	(3, 2) the vendor is buying it originally at price: 0
+	(2, 5) the vendor is buying it originally at price: 0
+	(0, 4) the vendor is buying it originally at price: 1
+	(0, 3) the vendor is buying it originally at price: 1
+Number of people travelling: 2
+Their starting and end points: 
+(6 , 9 ) (9 , 7 ) 
+The defining polyhedra for q:
+IloModel model0 = {
+q_1  + q_2  + q_6  <= 3.90598 
+q_0  + q_1  <= 3.52186 
+q_1  + q_4  <= 5.56417 
+q_2  + q_4  <= 5.23877 
+}
+
+The defining polyhedra for u:
+IloModel model1 = {
+u_03  + u_04  <= 6.0781 
+u_01  + u_02  <= 5.78207 
+u_05  + u_06  <= 3.92722 
+u_03  + u_04  <= 5.03798 
+u_13  + u_15  <= 6.5074 
+u_10  + u_16  <= 5.14556 
+u_10  + u_13  + u_14  + u_15  <= 5.87181 
+u_11  + u_13  + u_14  <= 5.09022 
+}
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0]] 
+Leader's current maximum profit: 1
+-----------------PRINTDATA----------------
+
+
+SaveGenerated: 

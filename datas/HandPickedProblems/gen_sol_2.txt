@@ -1,0 +1,397 @@
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 21 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 1, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 1, 0, 1, 0,
+0, 0, 0, 0, 0, 0, 1, 1, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+	For the 1th people
+		[0, 1, 0, 0, 0, 1, 0, 0, 0, 0,
+0, 0, 1, 0, 0, 0, 1, 1, 1, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 1, 0]
+	For the 2th people
+		[0, 1, 0, 0, 0, 1, 0, 0, 1, 0,
+0, 0, 0, 0, 0, 0, 1, 1, 1, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 1, 0]
+Alpha Plus values are :
+[1, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+The objective value is : -9
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 1, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 1, 0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+1, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 1, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 1, 0, 0, 0, 0, 0, 0, 1, 0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+1, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 1, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 1, 0, 0, 0, 0, 0, 0, 1, 0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 1, 0, 0, 0, 0, 0, 0, 1, 0]
+For the 3th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 1, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 1, 0, 0, 0, 0, 0, 0, 1, 0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+1, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+For the 4th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0, 0, 0, 0, 1, 0, 1, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 1, 0, 0, 0, 0, 0, 0, 1, 0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 1, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0, 0, 0, 0, 0, 0, 0, 1, 0]
+For the 5th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 1, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 1, 0, 0, 0, 0, 0, 0, 1, 0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 1, 0, 0, 0, 0, 0, 0, 1, 0]
+For the 6th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 1, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 1, 0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+1, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0,0, 0, 0, 0, 0, 0, 0, 0]
+For the 7th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 1, 0, 0, 0, 0, 0, 0, 1, 0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+1, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+For the 8th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0, 0, 0, 0, 1, 0, 1, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 1, 0, 0, 0, 0, 0, 0, 1, 0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+1, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+The solution for q is:
+[0, 0, 0, 1, 0, 0, 0, 1, 0, 0,
+1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+1, 1, 0, 0, 2, 0, 0, 1, 0, 0]
+Alpha Plus values are :
+[0, 1, 1]
+Alpha Plus values are :
+[0, 1, 1]
+Alpha Plus values are :
+[0, 1, 1]
+Alpha Plus values are :
+[0, 1, 1]
+Alpha Plus values are :
+[2, 3, 1]
+Alpha Plus values are :
+[1, 1, 1]
+Alpha Plus values are :
+[0, 1, 1]
+Alpha Plus values are :
+[2, 1, 1]
+Alpha Plus values are :
+[1, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 7 different and there are 8 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+2, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0, 1, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 2, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 2, 0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0, 1, 0, 0, 0, 0, 0, 0, 0, 0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 0, 1, 1, 0, 1,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 1, 0, 0, 0, 0, 0, 0, 0, 0]] [[0, 0, 0, 0, 0, 0, 1, 0, 0, 1,
+0, 0, 2, 0, 0, 0, 0, 0, 1, 0,
+1, 0, 0, 2, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+2, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 2, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 1, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 1, 0, 0, 0, 0, 0, 0, 0, 0]] [[0, 0, 0, 0, 0, 0, 1, 1, 0, 1,
+0, 0, 2, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 2, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 1, 0, 0, 0, 0, 0, 0, 0, 0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 1, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0]] 
+Utility move calc: 0
+THE PROBLEM IS Infeasible:
+Utility move calc: 1
+Utility move calc: 2
+Utility move calc: 3
+THE PROBLEM IS Infeasible:
+Utility move calc: 4
+THE PROBLEM IS Infeasible:
+Utility move calc: 5
+THE PROBLEM is InFEASIBLE or Unbounded:
+Utility move calc: 6
+Utility move calc: 7
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+2, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0, 1, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 2, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 2, 0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0, 1, 0, 0, 0, 0, 0, 0, 0, 0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 0, 1, 1, 0, 1,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 1, 0, 0, 0, 0, 0, 0, 0, 0]] [[0, 0, 0, 0, 0, 0, 1, 0, 0, 1,
+0, 0, 2, 0, 0, 0, 0, 0, 1, 0,
+1, 0, 0, 2, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+2, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 2, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 1, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 1, 0, 0, 0, 0, 0, 0, 0, 0]] [[0, 0, 0, 0, 0, 0, 1, 1, 0, 1,
+0, 0, 2, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 2, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 1, 0, 0, 0, 0, 0, 0, 0, 0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 4 
+
+ 

@@ -510,7 +510,7 @@ bool Paths::SubstantiallyDifferentyUtility(double delta , int index_of_utility) 
 	return true;
 }
 
-void Paths::UtilityMovingIfDifferent(vector<vector<double>> &x_flow, int random_dir_tries, std::ostream &os) {
+bool Paths::UtilityMovingIfDifferent(vector<vector<double>> &x_flow, int random_dir_tries, std::ostream &os) {
 	
 	int current_utility_number = static_cast<int>(set_of_utilities_.size());
 	//random_dir_tries *= 3; //Because we try to move in positive, negative normal direction
@@ -520,7 +520,7 @@ void Paths::UtilityMovingIfDifferent(vector<vector<double>> &x_flow, int random_
 	//Try Moving in given direction
 	FOR(si,current_utility_number-1) {
 		//u_vals[si] = vector<vector<double>>(people_n_); //NumMatrix(env, people_n_); //Save the utility value for later use
-		#if _DEBUG
+		#if _DEBUG_EXTRA
 		os << "Utility move calc: " << si << endl;
 		#endif
 		movement_delta[si] = MoveInUtilitySpace(x_flow, si, u_vals[si]);
@@ -555,8 +555,8 @@ void Paths::UtilityMovingIfDifferent(vector<vector<double>> &x_flow, int random_
 	auto maxi_delta = std::max_element(movement_delta.begin(), movement_delta.end());
 	int indi_delta = std::distance(movement_delta.begin(), maxi_delta);
 	if(*maxi_delta == std::numeric_limits<double>::min()) {
-		set_of_utilities_.pop_back();
-		return;
+		//set_of_utilities_.pop_back();
+		return false;
 	}
 	#if _DEBUG_EXTRA
 	os << "Euclidean distance calculating." << endl;
@@ -586,9 +586,8 @@ void Paths::UtilityMovingIfDifferent(vector<vector<double>> &x_flow, int random_
 	int indi_most_diff_util = std::distance(utility_euclid_distances.begin(), most_different_util);
 	//auto min_different_util = std::min_element(utility_euclid_distances.begin(), utility_euclid_distances.end());
 	
+	if(utility_euclid_min_distances[indi_most_diff_util] <= 0.01) return false; //If the new utility is too close to a previous one then find a new one
 	set_of_utilities_.pop_back();
-	if(utility_euclid_min_distances[indi_most_diff_util] <= 0.01) return; //If the new utility is too close to a previous one then find a new one
-
 	NumMatrix best_new_utility(env, people_n_);
 	FOR(j,people_n_) {
 		best_new_utility[j] = IloNumArray(env, edge_number_);
@@ -597,6 +596,7 @@ void Paths::UtilityMovingIfDifferent(vector<vector<double>> &x_flow, int random_
 		}
 	}
 	set_of_utilities_.push_back(best_new_utility);
+	return true;
 
 }
 

@@ -1,0 +1,845 @@
+
+
+-----------------PRINTDATA----------------
+The number of vertices: 10
+The number of arcs: 12
+The Arcs: 
+	(9, 7) the vendor is buying it originally at price: 0
+	(8, 9) the vendor is buying it originally at price: 1
+	(8, 5) the vendor is buying it originally at price: 0
+	(7, 8) the vendor is buying it originally at price: 1
+	(7, 5) the vendor is buying it originally at price: 1
+	(6, 9) the vendor is buying it originally at price: 0
+	(5, 8) the vendor is buying it originally at price: 0
+	(4, 1) the vendor is buying it originally at price: 1
+	(3, 2) the vendor is buying it originally at price: 0
+	(1, 9) the vendor is buying it originally at price: 1
+	(1, 5) the vendor is buying it originally at price: 0
+	(0, 1) the vendor is buying it originally at price: 1
+Number of people travelling: 2
+Their starting and end points: 
+(7 , 7 ) (8 , 5 ) 
+The defining polyhedra for q:
+IloModel model0 = {
+q_7  + q_9  <= 5.03476 
+q_4  + q_9  <= 3.68353 
+q_5  + q_9  + q_10  <= 3.97112 
+q_3  + q_9  <= 4.54022 
+}
+
+The defining polyhedra for u:
+IloModel model1 = {
+u_03  + u_06  + u_08  <= 6.43549 
+u_05  + u_06  + u_09  + u_010  <= 4.23537 
+u_04  + u_08  <= 5.80169 
+u_09  + u_010  <= 5.82242 
+u_10  + u_15  <= 4.76766 
+u_13  + u_19  <= 4.72442 
+u_16  + u_17  + u_18  <= 5.38637 
+u_10  + u_11  <= 4.57268 
+}
+
+Current set of utilities: 
+
+Leader's current maximum profit: 1.79769e+308
+-----------------PRINTDATA----------------
+
+
+-------InitialQValue BEGIN-------
+The solution is for a sample q value:
+[2, 2, 3, 1, 2, 2.97112, 3, 3, 1, 1,
+0, 0]
+
+
+-------InitialQValue END-------
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 0 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------PerturbationOfq BEGIN-------
+
+ q_tariff-p indexed
+(1 , 0 ) (2 , 1 ) (2 , 2 ) (1 , 3 ) (1 , 4 ) (2.97112 , 5 ) (3 , 6 ) (2 , 7 ) (0 , 8 ) (1 , 9 ) (-1 , 10 ) (0 , 11 ) 
+
+ Sorted q_indexed-p
+(-1 , 10 ) (0 , 8 ) (0 , 11 ) (1 , 0 ) (1 , 3 ) (1 , 4 ) (1 , 9 ) (2 , 1 ) (2 , 2 ) (2 , 7 ) (2.97112 , 5 ) (3 , 6 ) 
+
+First index T start: 3
+
+ Applied perturbation
+(-3e-05 , 10 ) (-2e-05 , 8 ) (0.99999 , 11 ) (1 , 0 ) (2.00001 , 3 ) (1.00002 , 4 ) (1.00003 , 9 ) (3.00004 , 1 ) (3.00005 , 2 ) (2.00006 , 7 ) (3.97119 , 5 ) (3.00008 , 6 ) 
+
+Sort according to original order
+(1 , 0 ) (3.00004 , 1 ) (3.00005 , 2 ) (2.00001 , 3 ) (1.00002 , 4 ) (3.97119 , 5 ) (3.00008 , 6 ) (2.00006 , 7 ) (-2e-05 , 8 ) (1.00003 , 9 ) (-3e-05 , 10 ) (0.99999 , 11 ) 
+
+
+-------PerturbationOfq END-------
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 2e-05, 0,
+3, 0]
+	For the 1th people
+		[2, 0, 0, 0, 0, 0, 0, 0, 0, 2.00002,
+3e-05, 0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+1, 1]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+1, 1]
+Alpha Plus values are :
+[3.99996, 3.00005]
+Alpha Negativa values are :
+[0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 2.99997]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+The objective value is : -4e-05
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+1, 1]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0]
+The solution for q is:
+[2, 0, 0, 0, 0, 1.00002, 0, 3, 1, 1,
+1, 0]
+Alpha Plus values are :
+[5.00002, 3.00002]
+Alpha Negativa values are :
+[0, 0]
+Maximum objective value is: 1
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 0 different and there are 0 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 2e-05, 0,
+3, 0], [2, 0, 0, 0, 0, 0, 0, 0, 0, 2.00002,
+3e-05, 0]] 
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 2e-05, 0,
+3, 0], [2, 0, 0, 0, 0, 0, 0, 0, 0, 2.00002,
+3e-05, 0]] 
+Leader's current maximum profit: 1
+
+Every leader's profit we have encountered
+1 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 1 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------PerturbationOfq BEGIN-------
+
+ q_tariff-p indexed
+(1 , 0 ) (0 , 1 ) (-1 , 2 ) (0 , 3 ) (-1 , 4 ) (1.00002 , 5 ) (0 , 6 ) (2 , 7 ) (0 , 8 ) (1 , 9 ) (0 , 10 ) (0 , 11 ) 
+
+ Sorted q_indexed-p
+(-1 , 2 ) (-1 , 4 ) (0 , 1 ) (0 , 3 ) (0 , 6 ) (0 , 8 ) (0 , 10 ) (0 , 11 ) (1 , 0 ) (1 , 9 ) (1.00002 , 5 ) (2 , 7 ) 
+
+First index T start: 8
+
+ Applied perturbation
+(-8e-05 , 2 ) (-1.00007 , 4 ) (0.99994 , 1 ) (-5e-05 , 3 ) (0.99996 , 6 ) (-3e-05 , 8 ) (-2e-05 , 10 ) (0.99999 , 11 ) (2 , 0 ) (1.00001 , 9 ) (2.00004 , 5 ) (2.00003 , 7 ) 
+
+Sort according to original order
+(2 , 0 ) (0.99994 , 1 ) (-8e-05 , 2 ) (-5e-05 , 3 ) (-1.00007 , 4 ) (2.00004 , 5 ) (0.99996 , 6 ) (2.00003 , 7 ) (-3e-05 , 8 ) (1.00001 , 9 ) (-2e-05 , 10 ) (0.99999 , 11 ) 
+
+
+-------PerturbationOfq END-------
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 1, 1.00002, 5e-05, 0, 0, 0, 0, 3e-05, 0,
+3, 0]
+	For the 1th people
+		[2, 0, 8e-05, 5e-05, 0, 0, 0, 0, 0, 2.00001,
+2e-05, 0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+1, 1]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+1, 1]
+Alpha Plus values are :
+[3.99997, 3.00002]
+Alpha Negativa values are :
+[0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 2.99998]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+The objective value is : -6e-05
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+1, 1]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+1, 1]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0]
+The solution for q is:
+[2, 0, 0, 0, 0, 1.97112, 0, 3, 1, 1,
+1, 0]
+Alpha Plus values are :
+[5.00002, 3.00002]
+Alpha Plus values are :
+[5.97112, 3.00001]
+Alpha Negativa values are :
+[0, 0]
+Alpha Negativa values are :
+[0.971088, 0]
+Maximum objective value is: 1
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 1 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 2e-05, 0,
+3, 0], [2, 0, 0, 0, 0, 0, 0, 0, 0, 2.00002,
+3e-05, 0]] [[0, 1, 1.00002, 5e-05, 0, 0, 0, 0, 3e-05, 0,
+3, 0], [2, 0, 8e-05, 5e-05, 0, 0, 0, 0, 0, 2.00001,
+2e-05, 0]] 
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 2e-05, 0,
+3, 0], [2, 0, 0, 0, 0, 0, 0, 0, 0, 2.00002,
+3e-05, 0]] [[0, 1, 1.00002, 5e-05, 0, 0, 0, 0, 3e-05, 0,
+3, 0], [2, 0, 8e-05, 5e-05, 0, 0, 0, 0, 0, 2.00001,
+2e-05, 0]] 
+Leader's current maximum profit: 1
+
+Every leader's profit we have encountered
+0.999 1 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 2 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------PerturbationOfq BEGIN-------
+
+ q_tariff-p indexed
+(1 , 0 ) (0 , 1 ) (-1 , 2 ) (0 , 3 ) (-1 , 4 ) (1.97112 , 5 ) (0 , 6 ) (2 , 7 ) (0 , 8 ) (1 , 9 ) (0 , 10 ) (0 , 11 ) 
+
+ Sorted q_indexed-p
+(-1 , 2 ) (-1 , 4 ) (0 , 1 ) (0 , 3 ) (0 , 6 ) (0 , 8 ) (0 , 10 ) (0 , 11 ) (1 , 0 ) (1 , 9 ) (1.97112 , 5 ) (2 , 7 ) 
+
+First index T start: 8
+
+ Applied perturbation
+(-8e-05 , 2 ) (-1.00007 , 4 ) (0.99994 , 1 ) (-5e-05 , 3 ) (0.99996 , 6 ) (-3e-05 , 8 ) (-2e-05 , 10 ) (0.99999 , 11 ) (2 , 0 ) (1.00001 , 9 ) (2.97114 , 5 ) (2.00003 , 7 ) 
+
+Sort according to original order
+(2 , 0 ) (0.99994 , 1 ) (-8e-05 , 2 ) (-5e-05 , 3 ) (-1.00007 , 4 ) (2.97114 , 5 ) (0.99996 , 6 ) (2.00003 , 7 ) (-3e-05 , 8 ) (1.00001 , 9 ) (-2e-05 , 10 ) (0.99999 , 11 ) 
+
+
+-------PerturbationOfq END-------
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 1, 1.00002, 5e-05, 0, 0, 0, 0, 3e-05, 0,
+3, 0]
+	For the 1th people
+		[2, 0, 8e-05, 5e-05, 0, 0, 0, 0, 0, 2.00001,
+2e-05, 0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+1, 1]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+1, 1]
+Alpha Plus values are :
+[3.99997, 3.00002]
+Alpha Negativa values are :
+[0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 2.99998]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+The objective value is : -6e-05
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+1, 1]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+1, 1]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+1, 1]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0]
+The solution for q is:
+[2, 0, 0, 0, 0, 1.00003, 0, 1.99999, 1, 1,
+1, 0]
+Alpha Plus values are :
+[5.00003, 3.00002]
+Alpha Plus values are :
+[5.00003, 3.00001]
+Alpha Plus values are :
+[5.00003, 3.00001]
+Alpha Negativa values are :
+[1e-05, 0]
+Alpha Negativa values are :
+[0, 0]
+Alpha Negativa values are :
+[0, 0]
+Maximum objective value is: 1
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 2e-05, 0,
+3, 0], [2, 0, 0, 0, 0, 0, 0, 0, 0, 2.00002,
+3e-05, 0]] [[0, 1, 1.00002, 5e-05, 0, 0, 0, 0, 3e-05, 0,
+3, 0], [2, 0, 8e-05, 5e-05, 0, 0, 0, 0, 0, 2.00001,
+2e-05, 0]] [[0, 1, 1.00002, 5e-05, 0, 0, 0, 0, 3e-05, 0,
+3, 0], [2, 0, 8e-05, 5e-05, 0, 0, 0, 0, 0, 2.00001,
+2e-05, 0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 2e-05, 0,
+3, 0], [2, 0, 0, 0, 0, 0, 0, 0, 0, 2.00002,
+3e-05, 0]] [[0, 1, 1.00002, 5e-05, 0, 0, 0, 0, 3e-05, 0,
+3, 0], [2, 0, 8e-05, 5e-05, 0, 0, 0, 0, 0, 2.00001,
+2e-05, 0]] 
+Leader's current maximum profit: 1
+
+Every leader's profit we have encountered
+0.999 1 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 3 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------PerturbationOfq BEGIN-------
+
+ q_tariff-p indexed
+(1 , 0 ) (0 , 1 ) (-1 , 2 ) (0 , 3 ) (-1 , 4 ) (1.00003 , 5 ) (0 , 6 ) (0.99999 , 7 ) (0 , 8 ) (1 , 9 ) (0 , 10 ) (0 , 11 ) 
+
+ Sorted q_indexed-p
+(-1 , 2 ) (-1 , 4 ) (0 , 1 ) (0 , 3 ) (0 , 6 ) (0 , 8 ) (0 , 10 ) (0 , 11 ) (0.99999 , 7 ) (1 , 0 ) (1 , 9 ) (1.00003 , 5 ) 
+
+First index T start: 8
+
+ Applied perturbation
+(-8e-05 , 2 ) (-1.00007 , 4 ) (0.99994 , 1 ) (-5e-05 , 3 ) (0.99996 , 6 ) (-3e-05 , 8 ) (-2e-05 , 10 ) (0.99999 , 11 ) (1.99999 , 7 ) (1.00001 , 0 ) (2.00002 , 9 ) (1.00006 , 5 ) 
+
+Sort according to original order
+(1.00001 , 0 ) (0.99994 , 1 ) (-8e-05 , 2 ) (-5e-05 , 3 ) (-1.00007 , 4 ) (1.00006 , 5 ) (0.99996 , 6 ) (1.99999 , 7 ) (-3e-05 , 8 ) (2.00002 , 9 ) (-2e-05 , 10 ) (0.99999 , 11 ) 
+
+
+-------PerturbationOfq END-------
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 1, 1.00002, 5e-05, 0, 0, 0, 0, 3e-05, 0,
+3, 0]
+	For the 1th people
+		[2, 2, 8e-05, 5e-05, 0, 0, 0, 0, 3e-05, 0.99994,
+0, 0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+1, 1]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+1, 1]
+Alpha Plus values are :
+[3.99997, 2.99998]
+Alpha Negativa values are :
+[0, 2e-05]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 2.99998]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+The objective value is : -0.0001
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+1, 1]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+1, 1]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+1, 1]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0]
+The solution for q is:
+[2, 0, 0, 0, 0, 1.00003, 0, 1.99999, 1, 1,
+1, 0]
+Alpha Plus values are :
+[5.00003, 3.00002]
+Alpha Plus values are :
+[5.00003, 3.00001]
+Alpha Plus values are :
+[5.00003, 1.99994]
+Alpha Negativa values are :
+[1e-05, 0]
+Alpha Negativa values are :
+[0, 0]
+Alpha Negativa values are :
+[0, 0]
+Maximum objective value is: 1
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 2 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 2e-05, 0,
+3, 0], [2, 0, 0, 0, 0, 0, 0, 0, 0, 2.00002,
+3e-05, 0]] [[0, 1, 1.00002, 5e-05, 0, 0, 0, 0, 3e-05, 0,
+3, 0], [2, 0, 8e-05, 5e-05, 0, 0, 0, 0, 0, 2.00001,
+2e-05, 0]] [[0, 1, 1.00002, 5e-05, 0, 0, 0, 0, 3e-05, 0,
+3, 0], [2, 2, 8e-05, 5e-05, 0, 0, 0, 0, 3e-05, 0.99994,
+0, 0]] 
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 2e-05, 0,
+3, 0], [2, 0, 0, 0, 0, 0, 0, 0, 0, 2.00002,
+3e-05, 0]] [[0, 1, 1.00002, 5e-05, 0, 0, 0, 0, 3e-05, 0,
+3, 0], [2, 0, 8e-05, 5e-05, 0, 0, 0, 0, 0, 2.00001,
+2e-05, 0]] [[0, 1, 1.00002, 5e-05, 0, 0, 0, 0, 3e-05, 0,
+3, 0], [2, 2, 8e-05, 5e-05, 0, 0, 0, 0, 3e-05, 0.99994,
+0, 0]] 
+Leader's current maximum profit: 1
+
+Every leader's profit we have encountered
+0.999 1 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 4 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------PerturbationOfq BEGIN-------
+
+ q_tariff-p indexed
+(1 , 0 ) (0 , 1 ) (-1 , 2 ) (0 , 3 ) (-1 , 4 ) (1.00003 , 5 ) (0 , 6 ) (0.99999 , 7 ) (0 , 8 ) (1 , 9 ) (0 , 10 ) (0 , 11 ) 
+
+ Sorted q_indexed-p
+(-1 , 2 ) (-1 , 4 ) (0 , 1 ) (0 , 3 ) (0 , 6 ) (0 , 8 ) (0 , 10 ) (0 , 11 ) (0.99999 , 7 ) (1 , 0 ) (1 , 9 ) (1.00003 , 5 ) 
+
+First index T start: 8
+
+ Applied perturbation
+(-8e-05 , 2 ) (-1.00007 , 4 ) (0.99994 , 1 ) (-5e-05 , 3 ) (0.99996 , 6 ) (-3e-05 , 8 ) (-2e-05 , 10 ) (0.99999 , 11 ) (1.99999 , 7 ) (1.00001 , 0 ) (2.00002 , 9 ) (1.00006 , 5 ) 
+
+Sort according to original order
+(1.00001 , 0 ) (0.99994 , 1 ) (-8e-05 , 2 ) (-5e-05 , 3 ) (-1.00007 , 4 ) (1.00006 , 5 ) (0.99996 , 6 ) (1.99999 , 7 ) (-3e-05 , 8 ) (2.00002 , 9 ) (-2e-05 , 10 ) (0.99999 , 11 ) 
+
+
+-------PerturbationOfq END-------
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 1, 1.00002, 5e-05, 0, 0, 0, 0, 3e-05, 0,
+3, 0]
+	For the 1th people
+		[2, 2, 8e-05, 5e-05, 0, 0, 0, 0, 3e-05, 0.99994,
+0, 0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+1, 1]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+1, 1]
+Alpha Plus values are :
+[3.99997, 2.99998]
+Alpha Negativa values are :
+[0, 2e-05]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 2.99998]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+The objective value is : -0.0001
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+1, 1]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+1, 1]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+1, 1]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0]
+For the 3th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+1, 1]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0]
+The solution for q is:
+[2, 0, 0, 0, 0, 0, 0, 3, 1, 1,
+1, 0]
+Alpha Plus values are :
+[5.00002, 3.00002]
+Alpha Plus values are :
+[5.00003, 3.00001]
+Alpha Plus values are :
+[1000, 1.99994]
+Alpha Plus values are :
+[5.00003, 1.99994]
+Alpha Negativa values are :
+[0, 0]
+Alpha Negativa values are :
+[0, 0]
+Alpha Negativa values are :
+[995, 0]
+Alpha Negativa values are :
+[0, 0]
+Maximum objective value is: 1
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 2 different and there are 3 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 2e-05, 0,
+3, 0], [2, 0, 0, 0, 0, 0, 0, 0, 0, 2.00002,
+3e-05, 0]] [[0, 1, 1.00002, 5e-05, 0, 0, 0, 0, 3e-05, 0,
+3, 0], [2, 0, 8e-05, 5e-05, 0, 0, 0, 0, 0, 2.00001,
+2e-05, 0]] [[0, 1, 1.00002, 5e-05, 0, 0, 0, 0, 3e-05, 0,
+3, 0], [2, 2, 8e-05, 5e-05, 0, 0, 0, 0, 3e-05, 0.99994,
+0, 0]] [[0, 1, 1.00002, 5e-05, 0, 0, 0, 0, 3e-05, 0,
+3, 0], [2, 2, 8e-05, 5e-05, 0, 0, 0, 0, 3e-05, 0.99994,
+0, 0]] 
+Utility move calc: 0
+Utility move calc: 1
+Utility move calc: 2
+THE PROBLEM is InFEASIBLE or Unbounded:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 2e-05, 0,
+3, 0], [2, 0, 0, 0, 0, 0, 0, 0, 0, 2.00002,
+3e-05, 0]] [[0, 1, 1.00002, 5e-05, 0, 0, 0, 0, 3e-05, 0,
+3, 0], [2, 0, 8e-05, 5e-05, 0, 0, 0, 0, 0, 2.00001,
+2e-05, 0]] [[0, 1, 1.00002, 5e-05, 0, 0, 0, 0, 3e-05, 0,
+3, 0], [2, 2, 8e-05, 5e-05, 0, 0, 0, 0, 3e-05, 0.99994,
+0, 0]] 
+Leader's current maximum profit: 1
+
+Every leader's profit we have encountered
+0.999 1 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 5 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------PerturbationOfq BEGIN-------
+
+ q_tariff-p indexed
+(1 , 0 ) (0 , 1 ) (-1 , 2 ) (0 , 3 ) (-1 , 4 ) (0 , 5 ) (0 , 6 ) (2 , 7 ) (0 , 8 ) (1 , 9 ) (0 , 10 ) (0 , 11 ) 
+
+ Sorted q_indexed-p
+(-1 , 2 ) (-1 , 4 ) (0 , 1 ) (0 , 3 ) (0 , 5 ) (0 , 6 ) (0 , 8 ) (0 , 10 ) (0 , 11 ) (1 , 0 ) (1 , 9 ) (2 , 7 ) 
+
+First index T start: 9
+
+ Applied perturbation
+(-9e-05 , 2 ) (-1.00008 , 4 ) (0.99993 , 1 ) (-6e-05 , 3 ) (0.99995 , 5 ) (-4e-05 , 6 ) (-3e-05 , 8 ) (0.99998 , 10 ) (0.99999 , 11 ) (1 , 0 ) (2.00001 , 9 ) (2.00002 , 7 ) 
+
+Sort according to original order
+(1 , 0 ) (0.99993 , 1 ) (-9e-05 , 2 ) (-6e-05 , 3 ) (-1.00008 , 4 ) (0.99995 , 5 ) (-4e-05 , 6 ) (2.00002 , 7 ) (-3e-05 , 8 ) (2.00001 , 9 ) (0.99998 , 10 ) (0.99999 , 11 ) 
+
+
+-------PerturbationOfq END-------
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 1.00003, 6e-05, 0.00015, 0, 0, 0, 3e-05, 0,
+3, 0]
+	For the 1th people
+		[2, 1.00008, 1.99996, 6e-05, 3, 0, 0, 0, 3e-05, 1.99998,
+0, 0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+1, 1]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+1, 1]
+Alpha Plus values are :
+[4.99997, 3.99999]
+Alpha Negativa values are :
+[0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 3.99998]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0.99998]
+The objective value is : 1.99993
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+1, 1]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+1, 1]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+1, 1]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0]
+For the 3th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+1, 1]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0, 0]
+The solution for q is:
+[2, 0, 0, 0, 0, 0, 0, 3, 1, 1,
+1, 0]
+Alpha Plus values are :
+[5.00002, 3.00002]
+Alpha Plus values are :
+[5.00003, 3.00001]
+Alpha Plus values are :
+[1000, 1.99994]
+Alpha Plus values are :
+[5.00003, 2.99998]
+Alpha Negativa values are :
+[0, 0]
+Alpha Negativa values are :
+[0, 0]
+Alpha Negativa values are :
+[995, 0]
+Alpha Negativa values are :
+[0, 0]
+Maximum objective value is: 1
+
+-------FindingTariffWithFiniteUtilities END-------
+
+
+-----------------------Found the optimal solution in the iteration: 5 and the optimal value is: 1    -------------------------
+
+-------------------------------------------------ALL OF THE ITERATIONS HAS ENDED-----------------------------------------
+
+
+The encountered q_tariffs.
+1 0.99993 -9e-05 -6e-05 -1.00008 0.99995 -4e-05 2.00002 -3e-05 2.00001 0.99998 0.99999 
+1 3.00004 3.00005 2.00001 1.00002 3.97119 3.00008 2.00006 -2e-05 1.00003 -3e-05 0.99999 
+1.00001 0.99994 -8e-05 -5e-05 -1.00007 1.00006 0.99996 1.99999 -3e-05 2.00002 -2e-05 0.99999 
+1.00001 0.99994 -8e-05 -5e-05 -1.00007 1.00006 0.99996 1.99999 -3e-05 2.00002 -2e-05 0.99999 
+2 0.99994 -8e-05 -5e-05 -1.00007 2.00004 0.99996 2.00003 -3e-05 1.00001 -2e-05 0.99999 
+2 0.99994 -8e-05 -5e-05 -1.00007 2.97114 0.99996 2.00003 -3e-05 1.00001 -2e-05 0.99999 
+
+
+-----------------PRINTDATA----------------
+The number of vertices: 10
+The number of arcs: 12
+The Arcs: 
+	(9, 7) the vendor is buying it originally at price: 0
+	(8, 9) the vendor is buying it originally at price: 1
+	(8, 5) the vendor is buying it originally at price: 0
+	(7, 8) the vendor is buying it originally at price: 1
+	(7, 5) the vendor is buying it originally at price: 1
+	(6, 9) the vendor is buying it originally at price: 0
+	(5, 8) the vendor is buying it originally at price: 0
+	(4, 1) the vendor is buying it originally at price: 1
+	(3, 2) the vendor is buying it originally at price: 0
+	(1, 9) the vendor is buying it originally at price: 1
+	(1, 5) the vendor is buying it originally at price: 0
+	(0, 1) the vendor is buying it originally at price: 1
+Number of people travelling: 2
+Their starting and end points: 
+(7 , 7 ) (8 , 5 ) 
+The defining polyhedra for q:
+IloModel model0 = {
+q_7  + q_9  <= 5.03476 
+q_4  + q_9  <= 3.68353 
+q_5  + q_9  + q_10  <= 3.97112 
+q_3  + q_9  <= 4.54022 
+}
+
+The defining polyhedra for u:
+IloModel model1 = {
+u_03  + u_06  + u_08  <= 6.43549 
+u_05  + u_06  + u_09  + u_010  <= 4.23537 
+u_04  + u_08  <= 5.80169 
+u_09  + u_010  <= 5.82242 
+u_10  + u_15  <= 4.76766 
+u_13  + u_19  <= 4.72442 
+u_16  + u_17  + u_18  <= 5.38637 
+u_10  + u_11  <= 4.57268 
+}
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 2e-05, 0,
+3, 0], [2, 0, 0, 0, 0, 0, 0, 0, 0, 2.00002,
+3e-05, 0]] [[0, 1, 1.00002, 5e-05, 0, 0, 0, 0, 3e-05, 0,
+3, 0], [2, 0, 8e-05, 5e-05, 0, 0, 0, 0, 0, 2.00001,
+2e-05, 0]] [[0, 1, 1.00002, 5e-05, 0, 0, 0, 0, 3e-05, 0,
+3, 0], [2, 2, 8e-05, 5e-05, 0, 0, 0, 0, 3e-05, 0.99994,
+0, 0]] [[0, 0, 1.00003, 6e-05, 0.00015, 0, 0, 0, 3e-05, 0,
+3, 0], [2, 1.00008, 1.99996, 6e-05, 3, 0, 0, 0, 3e-05, 1.99998,
+0, 0]] 
+Leader's current maximum profit: 1
+-----------------PRINTDATA----------------
+
+
+SaveGenerated: 
+

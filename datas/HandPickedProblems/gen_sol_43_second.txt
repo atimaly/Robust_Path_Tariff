@@ -1,0 +1,5437 @@
+
+
+-------InitialQValue BEGIN-------
+The solution is for a sample q value:
+[1, 1, 0, 1, 2, 0, 2, 3, 0, 2,
+1]
+
+
+-------InitialQValue END-------
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 0 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 0, 1, 0, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 2, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : 0
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[1, 1, 0, 0, 2, 0, 0, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 3
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 0 different and there are 0 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] 
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] 
+Leader's current maximum profit: 3
+
+Every leader's profit we have encountered
+3 
+Every leader's lower profit we have encountered
+0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 1 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 0, 1, 0, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -1
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 1 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 2 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 3 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 4 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 5 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 6 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 7 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 8 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 9 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 10 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 11 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 12 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 13 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 14 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 15 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 16 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 17 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 18 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 19 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 20 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 21 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 22 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 23 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 24 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 25 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 26 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 27 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 28 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 29 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 1th people
+		[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0]
+	For the 2th people
+		[0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 0, 1,
+1]
+	For the 1th people
+		[0, 0, 1, 0, 1, 0, 0, 0, 1, 0,
+1]
+	For the 2th people
+		[0, 0, 1, 0, 0, 1, 0, 0, 1, 0,
+1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0]
+For the person: 2
+	[0, 0, 0, 0, 0, 0, 0]
+The objective value is : -2
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+For the 2th utility
+	For the 0th people
+		[0, 0, 0, 1, 0, 0, 0, 1, 0, 1,
+1]
+	For the 1th people
+		[1, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+0]
+	For the 2th people
+		[1, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+0]
+The solution for q is:
+[0, 1, 0, 0, 0, 0, 1, 0, 0, 2,
+1]
+Alpha Plus values are :
+[3, 1, 0]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Plus values are :
+[3, 1, 1]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Alpha Negativa values are :
+[0, 0, 0]
+Maximum objective value is: 2
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 1 different and there are 2 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Utility move calc: 0
+Utility move calc: 1
+THE PROBLEM is InFEASIBLE or Unbounded:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+THE PROBLEM IS Infeasible:
+
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+
+Every leader's profit we have encountered
+2 3 
+Every leader's lower profit we have encountered
+-2 -1 0 
+-------------------------------------------------ALL OF THE ITERATIONS HAS ENDED-----------------------------------------
+
+
+The encountered q_tariffs.
+0 1 0 0 0 0 1 0 0 2 1 
+1 1 0 1 2 0 2 3 0 2 1 
+1 1 0 0 2 0 0 0 0 2 1 
+
+
+-----------------PRINTDATA----------------
+The number of vertices: 7
+The number of arcs: 11
+The Arcs: 
+	(6, 4) the vendor is buying it originally at price: 1
+	(4, 5) the vendor is buying it originally at price: 1
+	(4, 1) the vendor is buying it originally at price: 0
+	(3, 6) the vendor is buying it originally at price: 0
+	(3, 0) the vendor is buying it originally at price: 0
+	(2, 6) the vendor is buying it originally at price: 1
+	(2, 3) the vendor is buying it originally at price: 1
+	(1, 3) the vendor is buying it originally at price: 0
+	(1, 2) the vendor is buying it originally at price: 0
+	(0, 6) the vendor is buying it originally at price: 1
+	(0, 3) the vendor is buying it originally at price: 0
+Number of people travelling: 3
+Their starting and end points: 
+(1 , 5 ) (6 , 3 ) (0 , 6 ) 
+The defining polyhedra for q:
+IloModel model0 = {
+q_0  <= 1 
+q_1  <= 1 
+q_2  <= 0 
+q_3  <= 1 
+q_4  <= 2 
+q_5  <= 0 
+q_6  <= 2 
+q_7  <= 3 
+q_8  <= 0 
+q_9  <= 2 
+q_10  <= 1 
+q_5  + q_9  <= 6.71302 
+q_6  + q_9  <= 5.95089 
+q_2  + q_7  <= 5.17654 
+q_9  + q_10  <= 4.82202 
+q_4  + q_8  <= 5.93898 
+q_5  + q_10  <= 4.84771 
+q_1  + q_8  <= 6.80461 
+q_4  + q_7  <= 5.31182 
+q_1  + q_2  + q_3  <= 5.58568 
+q_3  + q_10  <= 4.74823 
+}
+
+The defining polyhedra for u:
+IloModel model1 = {
+u_00  <= 2 
+u_01  <= 0 
+u_02  <= 3 
+u_03  <= 1 
+u_04  <= 2 
+u_05  <= 0 
+u_06  <= 2 
+u_07  <= 3 
+u_08  <= 0 
+u_09  <= 2 
+u_010  <= 3 
+u_10  <= 0 
+u_11  <= 2 
+u_12  <= 0 
+u_13  <= 3 
+u_14  <= 3 
+u_15  <= 0 
+u_16  <= 3 
+u_17  <= 2 
+u_18  <= 1 
+u_19  <= 2 
+u_110  <= 1 
+u_20  <= 0 
+u_21  <= 0 
+u_22  <= 2 
+u_23  <= 3 
+u_24  <= 2 
+u_25  <= 0 
+u_26  <= 3 
+u_27  <= 1 
+u_28  <= 1 
+u_29  <= 1 
+u_210  <= 3 
+u_02  + u_04  <= 6.27251 
+u_05  + u_07  <= 4.07877 
+u_05  + u_010  <= 4.19895 
+u_04  + u_05  <= 5.18422 
+u_06  + u_08  <= 5.54063 
+u_03  + u_07  <= 3.84333 
+u_01  + u_04  <= 5.26472 
+u_02  + u_05  + u_06  + u_08  <= 4.38171 
+u_09  + u_010  <= 6.23465 
+u_04  + u_010  <= 4.60373 
+u_00  + u_05  + u_06  <= 4.84786 
+u_00  + u_02  <= 3.28148 
+u_01  + u_04  + u_07  <= 5.44064 
+u_02  + u_06  + u_07  + u_09  <= 5.47817 
+u_03  + u_07  + u_08  + u_010  <= 2.27754 
+u_00  + u_05  <= 3.58434 
+u_03  + u_05  <= 3.76305 
+u_05  + u_08  + u_010  <= 6.16789 
+u_06  + u_07  <= 5.28225 
+u_01  + u_08  <= 5.98274 
+u_00  + u_01  <= 5.7473 
+u_02  + u_07  <= 5.30214 
+u_08  + u_010  <= 5.89941 
+u_02  + u_03  + u_04  + u_09  <= 5.2585 
+u_04  + u_06  <= 5.3526 
+u_06  + u_08  <= 6.01278 
+u_00  + u_02  + u_07  + u_08  + u_010  <= 5.54811 
+u_04  + u_09  <= 6.23738 
+u_00  + u_01  + u_06  <= 4.40089 
+u_00  + u_04  <= 4.14016 
+}
+
+Current set of utilities: 
+[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+0]] [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0], [0, 0, 0, 0, 0, 0, 0, 1, 0, 1,
+0]] 
+Leader's current maximum profit: 2
+-----------------PRINTDATA----------------

@@ -1,0 +1,228 @@
+
+
+-----------------PRINTDATA----------------
+The number of vertices: 10
+The number of arcs: 7
+The Arcs: 
+	(9, 6) the vendor is buying it originally at price: 0
+	(8, 0) the vendor is buying it originally at price: 0
+	(7, 8) the vendor is buying it originally at price: 0
+	(6, 7) the vendor is buying it originally at price: 1
+	(6, 3) the vendor is buying it originally at price: 0
+	(0, 5) the vendor is buying it originally at price: 0
+	(0, 1) the vendor is buying it originally at price: 0
+Number of people travelling: 2
+Their starting and end points: 
+(9 , 6 ) (6 , 1 ) 
+The defining polyhedra for q:
+IloModel model0 = {
+q_0  + q_1  <= 4.13598 
+q_0  + q_2  + q_3  + q_6  <= 4.69889 
+q_4  + q_6  <= 5.69524 
+q_4  + q_5  <= 5.09309 
+}
+
+The defining polyhedra for u:
+IloModel model1 = {
+u_03  + u_05  <= 5.37085 
+u_03  + u_06  <= 4.51864 
+u_01  + u_04  <= 4.48573 
+u_02  + u_03  <= 5.51525 
+u_12  + u_13  <= 5.73977 
+u_10  + u_15  <= 4.43756 
+u_10  + u_14  <= 4.1205 
+u_14  + u_15  <= 4.40706 
+}
+
+Current set of utilities: 
+
+Leader's current maximum profit: 1.79769e+308
+-----------------PRINTDATA----------------
+
+
+-------InitialQValue BEGIN-------
+The solution is for a sample q value:
+[2, 1, 2, 0.698891, 1, 3, 0]
+
+
+-------InitialQValue END-------
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 0 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 0, 1, 0, 0, 0, 0]
+	For the 1th people
+		[0, 0, 1, 0, 0, 0, 0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 1]
+	For the 1th people
+		[1, 0, 0, 1, 1, 1, 0]
+Alpha Plus values are :
+[0, 1000]
+Alpha Negativa values are :
+[0, 993.301]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+The objective value is : 5.69889
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 1]
+	For the 1th people
+		[1, 0, 0, 1, 1, 1, 0]
+The solution for q is:
+[2, 0, 0, 2.69889, 1, 3, 0]
+Alpha Plus values are :
+[0, 8.69889]
+Alpha Negativa values are :
+[0, 0]
+Maximum objective value is: 7.69889
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 0 different and there are 0 amount of utilities.
+
+
+Current set of utilities: 
+[[0, 0, 1, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0, 0]] 
+
+
+Current set of utilities: 
+[[0, 0, 1, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0, 0]] 
+Leader's current maximum profit: 7.69889
+
+Every leader's profit we have encountered
+7.698 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 1 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[0, 1, 0, 1, 2, 1, 0]
+	For the 1th people
+		[0, 0, 1, 0, 0, 0, 0]
+The solution for x is:
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 1]
+	For the 1th people
+		[1, 0, 0, 1, 1, 1, 0]
+Alpha Plus values are :
+[0, 1000]
+Alpha Negativa values are :
+[0, 991.301]
+Beta values are :
+For the person: 0
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+For the person: 1
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+The objective value is : 7.69889
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 1]
+	For the 1th people
+		[1, 0, 0, 1, 1, 1, 0]
+For the 1th utility
+	For the 0th people
+		[0, 0, 0, 0, 0, 0, 1]
+	For the 1th people
+		[1, 0, 0, 1, 1, 1, 0]
+The solution for q is:
+[0.698891, 0, 0, 3, 1, 3, 1]
+Alpha Plus values are :
+[1, 7.69889]
+Alpha Plus values are :
+[1, 7.69889]
+Alpha Negativa values are :
+[0, 0]
+Alpha Negativa values are :
+[0, 0]
+Maximum objective value is: 7.69889
+
+-------FindingTariffWithFiniteUtilities END-------
+
+
+-----------------------Found the optimal solution in the iteration: 1 and the optimal value is: 7.69889    -------------------------
+
+-------------------------------------------------ALL OF THE ITERATIONS HAS ENDED-----------------------------------------
+
+
+The encountered q_tariffs.
+2 0 0 2.69889 1 3 0 
+2 1 2 0.698891 1 3 0 
+
+
+-----------------PRINTDATA----------------
+The number of vertices: 10
+The number of arcs: 7
+The Arcs: 
+	(9, 6) the vendor is buying it originally at price: 0
+	(8, 0) the vendor is buying it originally at price: 0
+	(7, 8) the vendor is buying it originally at price: 0
+	(6, 7) the vendor is buying it originally at price: 1
+	(6, 3) the vendor is buying it originally at price: 0
+	(0, 5) the vendor is buying it originally at price: 0
+	(0, 1) the vendor is buying it originally at price: 0
+Number of people travelling: 2
+Their starting and end points: 
+(9 , 6 ) (6 , 1 ) 
+The defining polyhedra for q:
+IloModel model0 = {
+q_0  + q_1  <= 4.13598 
+q_0  + q_2  + q_3  + q_6  <= 4.69889 
+q_4  + q_6  <= 5.69524 
+q_4  + q_5  <= 5.09309 
+}
+
+The defining polyhedra for u:
+IloModel model1 = {
+u_03  + u_05  <= 5.37085 
+u_03  + u_06  <= 4.51864 
+u_01  + u_04  <= 4.48573 
+u_02  + u_03  <= 5.51525 
+u_12  + u_13  <= 5.73977 
+u_10  + u_15  <= 4.43756 
+u_10  + u_14  <= 4.1205 
+u_14  + u_15  <= 4.40706 
+}
+
+Current set of utilities: 
+[[0, 0, 1, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0, 0]] [[0, 1, 0, 1, 2, 1, 0], [0, 0, 1, 0, 0, 0, 0]] 
+Leader's current maximum profit: 7.69889
+-----------------PRINTDATA----------------
+
+
+SaveGenerated: 

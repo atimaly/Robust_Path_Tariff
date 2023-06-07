@@ -92,10 +92,10 @@ class Paths : public Graph {
         bool SubstantiallyDifferentyUtility(double delta, int index_of_utility);
 
         double MoveInUtilitySpace(const vector<vector<double>>& x_flow, int index_of_utility, vector<vector<double>> &u_sol, std::ostream& os = std::cerr);
-	double MoveInUtilitySpaceRandomDirection(const vector<vector<double>>& x_flow, RandomUnitVecGen &uni_gen, vector<vector<double>> &u_sol, std::ostream& os = std::cerr);
+	double MoveInUtilitySpaceRandomDirection(const vector<vector<double>>& x_flow, RandomUnitVecGen &uni_gen, vector<vector<double>> &u_sol, int which_dir, std::ostream& os = std::cerr);
 
 
-	void UtilityMovingIfDifferent(vector<vector<double>> &x_flow, int random_dir_tries, std::ostream &os = std::cerr);
+	bool UtilityMovingIfDifferent(vector<vector<double>> &x_flow, int random_dir_tries, std::ostream &os = std::cerr);
 
 	double DifferenceBetweenUtilityies(vector<vector<double>> &u_vals, int index_of_utility, std::ostream &os = std::cerr);
 

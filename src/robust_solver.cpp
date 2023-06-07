@@ -91,6 +91,8 @@ void Paths::InitialQValue(vector<double> &q_tariff, std::ostream &os) const{
 
 	IloExpr expr(env); FOR(i,q_.getSize()) expr += q_[i];
 	IloObjective obj(env, expr, IloObjective::Maximize);
+	//IloObjective obj(env, q_[0], IloObjective::Maximize);
+
 	poly_q.add(obj);
 	
 	IloCplex cplex_q(poly_q);
@@ -100,20 +102,37 @@ void Paths::InitialQValue(vector<double> &q_tariff, std::ostream &os) const{
     #endif
 
 	cplex_q.solve();
+	#if _DEBUG
+	os << "SOLVED THE PROBLEM\n";
+	#endif
 	if(cplex_q.getStatus() == IloAlgorithm::Optimal) {
-        IloNumArray qr(env); cplex_q.getValues(qr, q_);
+        	IloNumArray qr(env, edge_number_); cplex_q.getValues(qr, q_);
+		/*
+		FOR(e,edge_number_) {
+			try{
+				qr[e] = cplex_q.getValue(q_[e]);
+			}
+			catch(IloAlgorithm::NotExtractedException) {
+				qr[e] = 0;
+			}
+		}*/
 		#if _DEBUG
 		os << "The solution is for a sample q value:\n" << qr << endl;
 		#endif
 		FOR(i,qr.getSize()) {
 			//arc_cost_q_[g.arcFromId(i)] = qr[i];
-			q_tariff.push_back(qr[i]);
+			try{
+				q_tariff.push_back(qr[i]);
+			}
+			catch(IloAlgorithm::NotExtractedException) {
+				q_tariff.push_back(0);
+			}
 		}
 		qr.end();
     }
 	else{os << "CAN NOT FIND SOLUTION FOR SettingQValue():" << endl;}
 
-	expr.end();
+	//expr.end();
 	obj.end();
 	poly_q.end();
 	cplex_q.end();
@@ -876,14 +895,14 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 		os << "------------------------------------------------------------------------------------\n\n";
 		#endif
 		//Petrubate q_tariff
-		std::discrete_distribution<> turbe({1,1});
-			if(turbe(gen))
+		//std::discrete_distribution<> turbe({1,1});
+		//	if(turbe(gen))
 				PerturbationOfq(q_tariff, 1e-5);
 
 		all_of_q_tariffs.insert(q_tariff); //To check if it changes
 
 		//Section 3.4. Solver Finding worst case for leader
-			int big_M = 300;
+			int big_M = 1000;
 			vector<double> alpha_pl_return(people_n_); vector<double> alpha_neg_return(people_n_);
 			vector<map<int,double>> beta_return(people_n_); vector<vector<double>> x_flow_return(people_n_, vector<double>(edge_number_)); 
 			double current_leader_earning = MinimizeLeadersEarning(q_tariff, big_M, alpha_pl_return, alpha_neg_return, beta_return, x_flow_return); //hyperparam TODO to-tune
@@ -921,7 +940,9 @@ void Paths::FindingOptimalCost(std::ostream &os) {
 			
 			//The new utility is not that different
 			if(how_different != static_cast<int>(set_of_utilities_.size())-1) {
-				UtilityMovingIfDifferent(x_flow_return, 50);
+				while(!UtilityMovingIfDifferent(x_flow_return, 50)) {
+
+				}
 			}
 
 			os << "\n\nCurrent set of utilities: " << endl;

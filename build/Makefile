@@ -204,6 +204,33 @@ src/print_save_data.cpp.s:
 	$(MAKE) -f CMakeFiles/robust_path_tariff.dir/build.make CMakeFiles/robust_path_tariff.dir/src/print_save_data.cpp.s
 .PHONY : src/print_save_data.cpp.s
 
+src/random_unit_vec.o: src/random_unit_vec.cpp.o
+
+.PHONY : src/random_unit_vec.o
+
+# target to build an object file
+src/random_unit_vec.cpp.o:
+	$(MAKE) -f CMakeFiles/robust_path_tariff.dir/build.make CMakeFiles/robust_path_tariff.dir/src/random_unit_vec.cpp.o
+.PHONY : src/random_unit_vec.cpp.o
+
+src/random_unit_vec.i: src/random_unit_vec.cpp.i
+
+.PHONY : src/random_unit_vec.i
+
+# target to preprocess a source file
+src/random_unit_vec.cpp.i:
+	$(MAKE) -f CMakeFiles/robust_path_tariff.dir/build.make CMakeFiles/robust_path_tariff.dir/src/random_unit_vec.cpp.i
+.PHONY : src/random_unit_vec.cpp.i
+
+src/random_unit_vec.s: src/random_unit_vec.cpp.s
+
+.PHONY : src/random_unit_vec.s
+
+# target to generate assembly for a file
+src/random_unit_vec.cpp.s:
+	$(MAKE) -f CMakeFiles/robust_path_tariff.dir/build.make CMakeFiles/robust_path_tariff.dir/src/random_unit_vec.cpp.s
+.PHONY : src/random_unit_vec.cpp.s
+
 src/robust_solver.o: src/robust_solver.cpp.o
 
 .PHONY : src/robust_solver.o
@@ -276,6 +303,9 @@ help:
 	@echo "... src/print_save_data.o"
 	@echo "... src/print_save_data.i"
 	@echo "... src/print_save_data.s"
+	@echo "... src/random_unit_vec.o"
+	@echo "... src/random_unit_vec.i"
+	@echo "... src/random_unit_vec.s"
 	@echo "... src/robust_solver.o"
 	@echo "... src/robust_solver.i"
 	@echo "... src/robust_solver.s"

@@ -18,7 +18,7 @@ int main(int argc, char** argv) {
 		PolyCreator prices_metad{4, 0, 0.1, 3, 5};
 		
 		PolyCreator utility_metad = prices_metad;
-		Paths Test(2, 10, 0.1, prices_metad, utility_metad);
+		Paths Test(3, 10, 0.1, prices_metad, utility_metad);
 		//ofstream fout("output_robust_path.txt");
 		//Test.SaveGenerated(fout);
 		//fout.close();

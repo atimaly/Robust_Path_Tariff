@@ -1,0 +1,291 @@
+
+-------InitialQValue BEGIN-------
+The solution is for a sample q value:
+[2, 6, 3]
+
+
+-------InitialQValue END-------
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 0 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------PerturbationOfq BEGIN-------
+
+ q_tariff-p indexed
+(2 , 0 ) (6 , 1 ) (3 , 2 ) 
+
+ Sorted q_indexed-p
+(2 , 0 ) (3 , 2 ) (6 , 1 ) 
+
+First index T start: 0
+
+ Applied perturbation
+(2 , 0 ) (3.00001 , 2 ) (6.00002 , 1 ) 
+
+Sort according to original order
+(2 , 0 ) (6.00002 , 1 ) (3.00001 , 2 ) 
+
+
+-------PerturbationOfq END-------
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[1, 0, 1e-05]
+The solution for x is:
+	For the 0th people
+		[1, 0, 1]
+Alpha Plus values are :
+[6.00002]
+Alpha Negativa values are :
+[0]
+Beta values are :
+For the person: 0
+	[0, 0, 0]
+The objective value is : 5.00001
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 1, 0]
+The solution for q is:
+[2, 6, 2.99999]
+Alpha Plus values are :
+[6]
+Alpha Negativa values are :
+[0]
+Maximum objective value is: 6
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 0 different and there are 0 amount of utilities.
+
+
+Current set of utilities: 
+[[1, 0, 1e-05]] 
+
+
+Current set of utilities: 
+[[1, 0, 1e-05]] 
+Leader's current maximum profit: 6
+
+Every leader's profit we have encountered
+6 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 1 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------PerturbationOfq BEGIN-------
+
+ q_tariff-p indexed
+(2 , 0 ) (6 , 1 ) (2.99999 , 2 ) 
+
+ Sorted q_indexed-p
+(2 , 0 ) (2.99999 , 2 ) (6 , 1 ) 
+
+First index T start: 0
+
+ Applied perturbation
+(2 , 0 ) (3 , 2 ) (6.00002 , 1 ) 
+
+Sort according to original order
+(2 , 0 ) (6.00002 , 1 ) (3 , 2 ) 
+
+
+-------PerturbationOfq END-------
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[1, 0, 2e-05]
+The solution for x is:
+	For the 0th people
+		[1, 0, 1]
+Alpha Plus values are :
+[6.00002]
+Alpha Negativa values are :
+[0]
+Beta values are :
+For the person: 0
+	[0, 0, 0]
+The objective value is : 5
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 1, 0]
+For the 1th utility
+	For the 0th people
+		[0, 1, 0]
+The solution for q is:
+[1.99999, 6, 3]
+Alpha Plus values are :
+[6]
+Alpha Plus values are :
+[6]
+Alpha Negativa values are :
+[0]
+Alpha Negativa values are :
+[0]
+Maximum objective value is: 6
+
+-------FindingTariffWithFiniteUtilities END-------
+The new utility is 0 different and there are 1 amount of utilities.
+
+
+Current set of utilities: 
+[[1, 0, 1e-05]] [[1, 0, 2e-05]] 
+Utility move calc: 0
+
+
+Current set of utilities: 
+[[1, 0, 1e-05]] [[0, 0.7517, 0.531289]] 
+Leader's current maximum profit: 6
+
+Every leader's profit we have encountered
+6 
+
+
+------------------------------------------------------------------------------------
+---------------------ITERATION: 2 --------------------------------------------
+------------------------------------------------------------------------------------
+
+
+
+-------PerturbationOfq BEGIN-------
+
+ q_tariff-p indexed
+(1.99999 , 0 ) (6 , 1 ) (3 , 2 ) 
+
+ Sorted q_indexed-p
+(1.99999 , 0 ) (3 , 2 ) (6 , 1 ) 
+
+First index T start: 0
+
+ Applied perturbation
+(1.99999 , 0 ) (3.00001 , 2 ) (6.00002 , 1 ) 
+
+Sort according to original order
+(1.99999 , 0 ) (6.00002 , 1 ) 3.00001 , 2 ) 
+
+
+-------PerturbationOfq END-------
+
+
+-------MinimizeLeadersEarning BEGIN-------
+Default row names c1, c2 ... being created.
+The solution for u is:
+	For the 0th people
+		[1, 0, 2e-05]
+The solution for x is:
+	For the 0th people
+		[1, 0, 1]
+Alpha Plus values are :
+[6.00002]
+Alpha Negativa values are :
+[0]
+Beta values are :
+For the person: 0
+	[0, 0, 0]
+The objective value is : 5
+
+
+-------MinimizeLeadersEarning END-------
+
+
+-------FindingTariffWithFiniteUtilities BEGIN-------
+Warning:  Output names have been modified due to duplicate names or characters invalid in LP format.
+Default row names c1, c2 ... being created.
+The solution for x is:
+For the 0th utility
+	For the 0th people
+		[0, 1, 0]
+For the 1th utility
+	For the 0th people
+		[1, 0, 1]
+For the 2th utility
+	For the 0th people
+		[0, 1, 0]
+The solution for q is:
+[2, 6, 3]
+Alpha Plus values are :
+[6]
+Alpha Plus values are :
+[5.53129]
+Alpha Plus values are :
+[6]
+Alpha Negativa values are :
+[0]
+Alpha Negativa values are :
+[0]
+Alpha Negativa values are :
+[0]
+Maximum objective value is: 5
+
+-------FindingTariffWithFiniteUtilities END-------
+
+
+-----------------------Found the optimal solution in the iteration: 2 and the optimal value is: 5    -------------------------
+
+-------------------------------------------------ALL OF THE ITERATIONS HAS ENDED-----------------------------------------
+
+
+The encountered q_tariffs.
+1.99999 6.00002 3.00001 
+2 6.00002 3 
+2 6.00002 3.00001 
+
+
+-----------------PRINTDATA----------------
+The number of vertices: 3
+The number of arcs: 3
+The Arcs: 
+	(1, 2) the vendor is buying it originally at price: 0
+	(0, 2) the vendor is buying it originally at price: 0
+	(0, 1) the vendor is buying it originally at price: 0
+Number of people travelling: 1
+Their starting and end points: 
+(0 , 2 ) 
+The defining polyhedra for q:
+IloModel model0 = {
+q_0  <= 2 
+q_1  <= 6 
+q_2  <= 3 
+}
+
+The defining polyhedra for u:
+IloModel model1 = {
+u_00  <= 1 
+u_01  <= 1 
+u_02  <= 4 
+}
+
+Current set of utilities: 
+[[1, 0, 1e-05]] [[0, 0.7517, 0.531289]] [[1, 0, 2e-05]] 
+Leader's current maximum profit: 5
+-----------------PRINTDATA----------------
+(
